@@ -1,3 +1,111 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: CommuterSans;
+    src: url(assets/CommuterSans.otf);
+}
+
+html, body {
+    font-family: "CommuterSans", serif;
+}
+
+.three {
+    width: 23.8%;
+}
+
+.col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type {
+    margin-left: 0;
+}
+
+.hamburger .line {
+    width: 50px;
+    height: 5px;
+    display: block;
+    margin: 8px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+
+#hamburger.is-active {
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#hamburger.is-active .line:nth-child(2) {
+    width: 0px;
+}
+
+#hamburger.is-active .line:nth-child(1),
+#hamburger.is-active .line:nth-child(3) {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+#hamburger.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(13px);
+    -ms-transform: translateY(13px);
+    -o-transform: translateY(13px);
+    transform: translateY(13px);
+}
+
+#hamburger.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-13px) rotate(90deg);
+    -ms-transform: translateY(-13px) rotate(90deg);
+    -o-transform: translateY(-13px) rotate(90deg);
+    transform: translateY(-13px) rotate(90deg);
+}
+
+
+.active__news {
+    animation-duration: 3000ms;
+    animation-delay: 0ms;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-iteration-count: 1;
+    animation-name: news;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes news {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    10% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    75% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(70%);
+    }
+}
+
