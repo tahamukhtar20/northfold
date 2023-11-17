@@ -8,8 +8,14 @@ export default {
         extend: {
             colors: {
                 'primary': '#4081E9',
+                'primary-light': '#AACCFF',
+                'primary-dark': '#265094',
                 'secondary': '#333333',
+                'secondary-light': '#666666',
+                'secondary-dark': '#222222',
                 'tertiary': '#25ccdc',
+                'tertiary-light': '#a6f7ff',
+                'tertiary-dark': '#0096a7',
             }
         },
     },

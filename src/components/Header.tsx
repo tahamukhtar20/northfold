@@ -26,7 +26,8 @@ const NewsTicker = ({news}: { news: string[] }) => {
             <ul className="flex flex-col ml-4">
                 {news.map((newsItem, index) => (
                     <li key={index}
-                        className={`mr-4 h-full flex ${animationStarted && active === index ? "active__news" : "hidden"}`}>
+                        className={`mr-4 h-full flex justify-center items-center ${animationStarted && active === index ? "active__news" : "hidden"}`}>
+                        <span className="font-extrabold text-gray-900 uppercase">News! </span>
                         <span className="flex h-full w-full p-1.5">{newsItem}</span>
                     </li>
                 ))}
@@ -36,16 +37,17 @@ const NewsTicker = ({news}: { news: string[] }) => {
 };
 
 export default function Header() {
-    const anchors: string[] = [
-        "home",
-        "services",
-        "technologies",
-        "case studies",
-        "industries",
-        "blog",
-        "about us",
-        "portfolio",
-        "contact"]
+    const anchors: { name: string; url: string; }[] = [
+        {name: "home", url: "/"},
+        {name: "services", url: "/services"},
+        {name: "technologies", url: "/technologies"},
+        {name: "case studies", url: "/case-studies"},
+        {name: "industries", url: "/industries"},
+        {name: "blog", url: "/blog"},
+        {name: "about us", url: "/about-us"},
+        {name: "portfolio", url: "/portfolio"},
+        {name: "contact", url: "/contact"},
+    ]
     const socialMediaLinks: { icon: JSX.Element, url: string }[] = [
         {icon: <TiSocialLinkedin/>, url: 'https://www.linkedin.com'},
         {icon: <TiSocialFacebook/>, url: 'https://www.facebook.com'},
@@ -53,13 +55,7 @@ export default function Header() {
         {icon: <TiSocialTwitter/>, url: 'https://www.twitter.com'},
     ];
     const isActive = (path: string) => {
-        if (path === "home") {
-            return location.pathname === "/" || location.pathname === "/home";
-        }
-        if (path.includes(" ")) {
-            return location.pathname === "/" + path.replace(" ", "%20");
-        }
-        return location.pathname === "/" + path;
+        return location.pathname === path;
     };
     const news: string[] = [
         "Its going to rain tomorrow",
@@ -70,6 +66,22 @@ export default function Header() {
         document.getElementById("hamburger")?.classList.toggle("is-active")
         document.getElementById("menu")?.classList.toggle("hidden")
     }
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const headerBottom = document.getElementById('header-bottom');
+
+            if (window.scrollY > 50) {
+                headerBottom?.classList.add('fixed', 'top-0', 'left-0');
+            } else {
+                headerBottom?.classList.remove('fixed', 'top-0', 'left-0');
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     const hamburgerMenu = (
         <div className="flex flex-col items-center xl:hidden w-full pt-1">
             <div className="flex flex-row justify-between w-full lg:px-20 md:px-14 sm:px-10 px-6">
@@ -86,21 +98,21 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <div className="justify-center items-center w-full h-fit bg-gray-100 px-20">
+            <div className="justify-center items-center w-full h-fit bg-gray-100 px-20 z-50">
                 <div className="hidden" id="menu">
                     <ul className="flex flex-col">
-                        {anchors.map((anchor: string, index: number) => (
-                            <li key={index} className="text-center flex items-center justify-center pb-4">
+                        {anchors.map((anchor: { name: string; url: string; }, index: number) => (
+                            <li key={index} className="text-center flex items-center justify-center pb-4 z-50">
                                 <a className={`capitalize hover:text-primary ${
-                                    isActive(anchor.toLowerCase()) ?
+                                    isActive(anchor.url) ?
                                         "font-extrabold text-primary" :
                                         "text-black"
                                 } ${
-                                    anchor.toLowerCase() === "contact" ?
+                                    anchor.name.toLowerCase() === "contact" ?
                                         "border border-gray-500 flex text-center py-0.5 px-2" :
                                         ""
                                 }`}
-                                   href={anchor.toLowerCase() === "home" ? "/" : anchor.toLowerCase()}>{anchor}</a>
+                                   href={anchor.url}>{anchor.name}</a>
                             </li>
                         ))}
                     </ul>
@@ -117,18 +129,18 @@ export default function Header() {
             </div>
             <div className="flex-row h-full items-center xl:flex hidden pr-20">
                 <ul className="flex flex-row">
-                    {anchors.map((anchor: string, index: number) => (
+                    {anchors.map((anchor: { name: string; url: string }, index: number) => (
                         <li key={index} className="ml-8 text-center flex items-center justify-center">
                             <a className={`capitalize hover:text-primary ${
-                                isActive(anchor.toLowerCase()) ?
+                                isActive(anchor.url) ?
                                     "font-extrabold text-primary" :
                                     "text-black"
                             } ${
-                                anchor.toLowerCase() === "contact" ?
+                                anchor.name.toLowerCase() === "contact" ?
                                     "border border-gray-500 flex text-center py-0.5 px-2" :
                                     ""
                             }`}
-                               href={anchor.toLowerCase() === "home" ? "/" : anchor.toLowerCase()}>{anchor}</a>
+                               href={anchor.url}>{anchor.name}</a>
                         </li>
                     ))}
                 </ul>
@@ -138,7 +150,8 @@ export default function Header() {
 
     const headerTop = (
         <div
-            className="h-10 flex-row items-center border-b-gray-200 border border-x-0 border-t-0 px-20 w-full justify-between xl:flex hidden">
+            className="h-10 flex-row items-center border-b-gray-200 border border-x-0 border-t-0 px-20 w-full justify-between xl:flex hidden z-50"
+            id="header-top">
             <NewsTicker news={news}/>
             <ul className="h-full flex flex-row">
                 {socialMediaLinks.map((socialMediaLink: {
@@ -155,13 +168,14 @@ export default function Header() {
         </div>
     )
     const headerBottom = (
-        <nav className="flex items-center justify-between flex-wrap h-[4.5rem]">
+        <nav className="flex items-center justify-between flex-wrap h-[4.5rem] z-50 w-full bg-gray-100 "
+             id="header-bottom">
             {hamburgerMenu}
             {nonHamburgerMenu}
         </nav>
     )
     return (
-        <header className="bg-gray-100 max-h-28 text-sm">
+        <header className="bg-gray-100 max-h-28 text-sm z-50">
             {headerTop}
             {headerBottom}
         </header>

@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: CommuterSans;
-    src: url(assets/CommuterSans.otf);
+    src: url(assets/hinted-CommutersSans-Regular.woff2);
 }
 
 html, body {
