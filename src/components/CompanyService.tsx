@@ -19,7 +19,7 @@ export default function CompanyService({
             </div>
             <div className="flex flex-col pl-4 gap-4 justify-between">
                 <h1 className="sm:text-2xl xs:text-xl text-lg uppercase font-black">{title}</h1>
-                <desc>{desc}</desc>
+                <desc className="font-inconsolata">{desc}</desc>
                 <a href={link}>
                     <Button className="bg-secondary text-white hover:bg-secondary-light">Learn More</Button>
                 </a>

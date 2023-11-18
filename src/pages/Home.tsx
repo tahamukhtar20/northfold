@@ -178,7 +178,8 @@ export default function Home() {
              ***/}
             <section className="flex flex-col lg:px-20 xs:px-10 px-4 lg:pb-20 xs:pb-10 pb-4 gap-6">
                 <h1 className="font-black sm:text-5xl xs:text-3xl text-2xl">Blogs</h1>
-                <desc>Some description about blogs lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                <desc className="font-inconsolata">Some description about blogs lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </desc>
                 <div className="bg-white grid sm:grid-cols-2 gap-4 place-items-center">
@@ -186,7 +187,7 @@ export default function Home() {
                         <BlogPreview title={blogPost.title} tagLine={blogPost.tagLine}
                                      description={blogPost.description} link={blogPost.link} key={index}/>))}
                     <a href={"/blog"} className="w-fit sm:col-span-2">
-                        <Button className="bg-secondary text-white hover:bg-secondary-light px-8">
+                        <Button className="!bg-secondary text-white hover:!bg-secondary-light px-8">
                             View All
                         </Button>
                     </a>
