@@ -3,6 +3,7 @@ import Hero from "../components/Hero.tsx";
 import ServiceSummary from "../components/ServiceSummary.tsx";
 import CompanyService from "../components/CompanyService.tsx";
 import Button from "../components/Button.tsx";
+import BlogPreview from "../components/BlogPreview.tsx";
 
 export default function Home() {
     const services = [
@@ -48,7 +49,44 @@ export default function Home() {
             desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
     ];
-
+    const blogPosts = [
+        {
+            title: "Lorem Ipsum",
+            tagLine: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            link: "/blog/something-nice",
+        },
+        {
+            title: "Lorem Ipsum",
+            tagLine: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            link: "/blog/something-nice",
+        },
+        {
+            title: "Lorem Ipsum",
+            tagLine: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            link: "/blog/something-nice",
+        },
+        {
+            title: "Lorem Ipsum",
+            tagLine: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            link: "/blog/something-nice",
+        },
+        {
+            title: "Lorem Ipsum",
+            tagLine: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            link: "/blog/something-nice",
+        },
+        {
+            title: "Lorem Ipsum",
+            tagLine: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            link: "/blog/something-nice",
+        },
+    ];
     return (
         <Layout>
             <Hero
@@ -59,7 +97,7 @@ export default function Home() {
             {/***
              Company Introduction Section
              ***/}
-            <section className="bg-white flex flex-col gap-4 lg:p-20 xs:p-10 p-2 relative pb-0 lg:pb-0 xs:pb-0">
+            <section className="bg-white flex flex-col gap-4 lg:p-20 xs:p-10 p-4 relative pb-0 lg:pb-0 xs:pb-0">
                 <div className="w-1/2 h-full absolute top-0 left-0 pr-3">
                     <div className="relative w-full h-full flex flex-row justify-between">
                         <div
@@ -103,22 +141,22 @@ export default function Home() {
                         }
                     </div>
                 </div>
-                <div className="w-full h-full flex flex-row gap-2">
-                    <div className="w-2 min-h-full bg-primary-dark"/>
-                    <h2 className="sm:text-xl xs:text-md text-sm font-bold">some text encouraging the customer to
-                        contact</h2>
-                </div>
-                <a className="w-full z-10" href={"/contact"}>
-                    <Button>
-                        Contact Us
-                    </Button>
-                </a>
+                <div className="p-4 flex-col flex gap-2">
+                    <div className="w-full h-full flex flex-row gap-2">
+                        <div className="w-2 min-h-full bg-primary-dark"/>
+                        <h2 className="sm:text-xl xs:text-md text-sm font-bold">some text encouraging the customer to
+                            contact</h2>
+                    </div>
+                    <a className="w-full z-10 " href={"/contact"}>
+                        <Button>
+                            Contact Us
+                        </Button>
+                    </a></div>
             </section>
-
             {/***
              Services Summary Section
              ***/}
-            <section className="bg-white flex flex-col gap-4 lg:p-20 xs:p-10 p-2">
+            <section className="bg-white flex flex-col gap-4 lg:p-20 xs:p-10 p-4">
                 {
                     services.map((service, index) => (
                         <div className="static z-10">
@@ -134,6 +172,25 @@ export default function Home() {
                         </div>
                     ))
                 }
+            </section>
+            {/***
+             Case Study/Blog Post Section
+             ***/}
+            <section className="flex flex-col lg:px-20 xs:px-10 px-4 lg:pb-20 xs:pb-10 pb-4 gap-6">
+                <h1 className="font-black sm:text-5xl xs:text-3xl text-2xl">Blogs</h1>
+                <desc>Some description about blogs lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </desc>
+                <div className="bg-white grid sm:grid-cols-2 gap-4 place-items-center">
+                    {blogPosts.map((blogPost, index) => (
+                        <BlogPreview title={blogPost.title} tagLine={blogPost.tagLine}
+                                     description={blogPost.description} link={blogPost.link} key={index}/>))}
+                    <a href={"/blog"} className="w-fit sm:col-span-2">
+                        <Button className="bg-secondary text-white hover:bg-secondary-light px-8">
+                            View All
+                        </Button>
+                    </a>
+                </div>
             </section>
         </Layout>
     );

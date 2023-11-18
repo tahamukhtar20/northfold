@@ -1,7 +1,7 @@
 export default function Hero({text, tagline, image}: { text: string, tagline?: string, image?: string }) {
     return (
         <div
-            className="xl:h-[calc(100vh-7rem)] h-[calc(100vh-2.5rem)] max-h-[90rem] relative flex items-center justify-start overflow-clip lg:px-20 xs:px-10 px-2"
+            className="xl:h-[calc(100vh-7rem)] h-[calc(100vh-2.5rem)] max-h-[90rem] relative flex items-center justify-start overflow-clip lg:px-20 xs:px-10 px-4"
             style={{
                 backgroundImage: `url('${image}')`,
                 backgroundSize: "cover",
