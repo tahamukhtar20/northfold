@@ -7,6 +7,11 @@
     src: url(assets/hinted-CommutersSans-Regular.woff2);
 }
 
+@font-face {
+    font-family: Inconsolata;
+    src: url(assets/Inconsolata-VariableFont_wdth,wght.ttf);
+}
+
 html, body {
     font-family: "CommuterSans", serif;
 }
@@ -109,3 +114,8 @@ html, body {
     }
 }
 
+.gradient-effect {
+    background: radial-gradient(circle, grey 1px, transparent 1px);
+    @apply bg-tertiary-light;
+    background-size: 50px 50px;
+}

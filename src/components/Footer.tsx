@@ -11,6 +11,7 @@ import {
     TiSocialInstagram,
     TiSocialLinkedin,
 } from 'react-icons/ti'
+import Button from "./Button.tsx";
 
 export default function Footer() {
     const anchors: { name: string; url: string; }[] = [
@@ -41,13 +42,11 @@ export default function Footer() {
         </ul>
     )
     const newsletterSignup = (
-        <div className="flex flex-row gap-2">
+        <div className="flex sm:flex-row flex-col gap-2">
             <input type="text"
                    className="border border-x-0 border-t-0 border-b-gray-200 bg-secondary focus:outline-none focus:border-primary text-white sm:w-80 w-full h-10 px-2"
                    placeholder="Email Address"/>
-            <button
-                className="bg-primary text-white font-black tracking-tight px-2 py-2 hover:bg-primary-dark transition-all ">Subscribe
-            </button>
+            <Button className="w-fit">Subscribe</Button>
         </div>
     )
     const socialMediaIcons = (
@@ -81,9 +80,9 @@ export default function Footer() {
                     {quickLinks}
                 </div>
                 <div className="flex flex-col gap-4 justify-evenly">
-                    {socialMediaIcons}
                     {newsletterSignup}
                     {termsAndConditonsPrivacyPolicyLinks}
+                    {socialMediaIcons}
                 </div>
             </footer>
             <footer

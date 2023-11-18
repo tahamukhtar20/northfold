@@ -16,8 +16,11 @@ export default {
                 'tertiary': '#25ccdc',
                 'tertiary-light': '#a6f7ff',
                 'tertiary-dark': '#0096a7',
-            }
-        },
+            },
+            fontFamily: {
+                'inconsolata': ['Inconsolata'],
+            },
+        }
     },
     plugins: [],
 }
