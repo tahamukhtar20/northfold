@@ -4,6 +4,8 @@ import ServiceSummary from "../components/ServiceSummary.tsx";
 import CompanyService from "../components/CompanyService.tsx";
 import Button from "../components/Button.tsx";
 import BlogPreview from "../components/BlogPreview.tsx";
+import Testimonial from "../components/Testimonial.tsx";
+import {useEffect, useRef} from "react";
 
 export default function Home() {
     const services = [
@@ -87,6 +89,90 @@ export default function Home() {
             link: "/blog/something-nice",
         },
     ];
+
+    const testimonials = [
+        {
+            company: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "Lorem Ipsum",
+            title: "Lorem Ipsum",
+        }, {
+            company: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "Lorem Ipsum",
+            title: "Lorem Ipsum",
+        }, {
+            company: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "Lorem Ipsum",
+            title: "Lorem Ipsum",
+        },
+        {
+            company: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "Lorem Ipsum",
+            title: "Lorem Ipsum",
+        }, {
+            company: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "Lorem Ipsum",
+            title: "Lorem Ipsum",
+        }, {
+            company: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "Lorem Ipsum",
+            title: "Lorem Ipsum",
+        }, {
+            company: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "Lorem Ipsum",
+            title: "Lorem Ipsum",
+        },
+        {
+            company: "Lorem Ipsum",
+            description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "Lorem Ipsum",
+            title: "Lorem Ipsum",
+        },]
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const container = containerRef?.current;
+
+        if (container) {
+            let scrollInterval: number | undefined = undefined;
+
+            const scrollWidth = container.scrollWidth;
+            const containerWidth = container.clientWidth;
+
+            const scroll = () => {
+                if (container.scrollLeft < scrollWidth - containerWidth) {
+                    container.scrollLeft += 0.8; // Adjust the scroll speed as needed
+                } else {
+                    container.scrollLeft = 0;
+                }
+            };
+
+            const startScroll = () => {
+                scrollInterval = setInterval(scroll, 50); // Adjust the scroll speed as needed
+            };
+
+            const pauseScroll = () => {
+                clearInterval(scrollInterval);
+            };
+
+            container.addEventListener('mouseenter', pauseScroll);
+            container.addEventListener('mouseleave', startScroll);
+
+            startScroll();
+
+            return () => {
+                clearInterval(scrollInterval);
+                container.removeEventListener('mouseenter', pauseScroll);
+                container.removeEventListener('mouseleave', startScroll);
+            };
+        }
+    }, []);
     return (
         <Layout>
             <Hero
@@ -192,6 +278,54 @@ export default function Home() {
                         </Button>
                     </a>
                 </div>
+            </section>
+            {/***
+             Testimonials Section
+             ***/}
+            <section className="">
+                <div className="lg:px-20 xs:px-10 px-4">
+                    <h1 className="font-black sm:text-5xl xs:text-3xl text-2xl">Testimonials</h1>
+                    <desc className="font-inconsolata">Some description
+                        about
+                        testimonials lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </desc>
+                </div>
+                <div className="bg-white flex flex-row gap-4 my-10 overflow-hidden" ref={containerRef}>
+                    {
+                        testimonials.map((testimonial, index) => (
+                            <Testimonial company={testimonial.company} description={testimonial.description}
+                                         name={testimonial.name} title={testimonial.title} key={index}/>
+                        ))
+                    }
+                </div>
+            </section>
+            {/***
+             Contact Us Section
+             ***/}
+            <section
+                className="lg:px-20 xs:px-10 px-4 lg:pb-20 xs:pb-10 pb-4 flex flex-col justify-center items-center gap-4">
+                <h1 className="font-black sm:text-5xl xs:text-3xl text-2xl p-0.5">How can we help you?</h1>
+                <div className="w-full flex flex-row">
+                    <label
+                        className="font-inconsolata tsm:text-2xl xs:text-xl text-lg">Name:&nbsp;</label>
+                    <input type="text"
+                           className="w-full border border-x-0 border-t-0 border-secondary focus:outline-0"/>
+                </div>
+                <div className="w-full flex flex-row">
+                    <label
+                        className="font-inconsolata tsm:text-2xl xs:text-xl text-lg whitespace-nowrap">Business
+                        Email:&nbsp;</label>
+                    <input type="text"
+                           className="w-full border border-x-0 border-t-0 border-secondary focus:outline-0"/>
+                </div>
+                <div className="w-full flex flex-row">
+                    <label
+                        className="font-inconsolata tsm:text-2xl xs:text-xl text-lg">Phone:&nbsp;</label>
+                    <input type="text"
+                           className="w-full border border-x-0 border-t-0 border-secondary focus:outline-0"/>
+                </div>
+                <Button className="self-start px-8 mt-4">Submit</Button>
             </section>
         </Layout>
     );

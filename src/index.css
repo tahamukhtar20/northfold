@@ -119,3 +119,11 @@ html, body {
     @apply bg-tertiary-light;
     background-size: 50px 50px;
 }
+
+.gradient-diagonal-lines {
+    background-image: repeating-linear-gradient(45deg,
+    #DDD 1px,
+    #DDD 2px,
+    transparent 0,
+    transparent 50px);
+}
