@@ -147,14 +147,14 @@ export default function Home() {
 
             const scroll = () => {
                 if (container.scrollLeft < scrollWidth - containerWidth) {
-                    container.scrollLeft += 0.8; // Adjust the scroll speed as needed
+                    container.scrollLeft += 1; // Adjust the scroll speed as needed
                 } else {
                     container.scrollLeft = 0;
                 }
             };
 
             const startScroll = () => {
-                scrollInterval = setInterval(scroll, 50); // Adjust the scroll speed as needed
+                scrollInterval = setInterval(scroll, 50);
             };
 
             const pauseScroll = () => {
@@ -291,7 +291,7 @@ export default function Home() {
                         incididunt ut labore et dolore magna aliqua.
                     </desc>
                 </div>
-                <div className="bg-white flex flex-row gap-4 my-10 overflow-hidden" ref={containerRef}>
+                <div className="bg-white flex flex-row gap-4 my-10 overflow-x-hidden" ref={containerRef}>
                     {
                         testimonials.map((testimonial, index) => (
                             <Testimonial company={testimonial.company} description={testimonial.description}

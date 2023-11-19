@@ -7,10 +7,10 @@ interface Props {
 
 export default function Layout({children}: Props) {
     return (
-        <div className="">
+        <>
             <Header/>
-            <main>{children}</main>
+            <main className="">{children}</main>
             <Footer/>
-        </div>
+        </>
     )
 }
