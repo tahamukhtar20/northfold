@@ -7,6 +7,7 @@ import {
 import {FaArrowRight} from "react-icons/fa";
 import {useEffect, useState} from "react";
 import logo from "../assets/TemporaryLogo.png";
+import {Link} from "react-router-dom";
 
 
 const NewsTicker = ({news}: { news: string[] }) => {
@@ -103,7 +104,7 @@ export default function Header() {
                     <ul className="flex flex-col">
                         {anchors.map((anchor: { name: string; url: string; }, index: number) => (
                             <li key={index} className="text-center flex items-center justify-center pb-4 z-50">
-                                <a className={`capitalize hover:text-primary ${
+                                <Link className={`capitalize hover:text-primary ${
                                     isActive(anchor.url) ?
                                         "font-extrabold text-primary" :
                                         "text-black"
@@ -112,7 +113,7 @@ export default function Header() {
                                         "border border-gray-500 flex text-center py-0.5 px-2" :
                                         ""
                                 }`}
-                                   href={anchor.url}>{anchor.name}</a>
+                                      to={anchor.url}>{anchor.name}</Link>
                             </li>
                         ))}
                     </ul>
@@ -131,7 +132,7 @@ export default function Header() {
                 <ul className="flex flex-row">
                     {anchors.map((anchor: { name: string; url: string }, index: number) => (
                         <li key={index} className="ml-8 text-center flex items-center justify-center">
-                            <a className={`capitalize hover:text-primary ${
+                            <Link className={`capitalize hover:text-primary ${
                                 isActive(anchor.url) ?
                                     "font-extrabold text-primary" :
                                     "text-black"
@@ -140,7 +141,7 @@ export default function Header() {
                                     "border border-gray-500 flex text-center py-0.5 px-2" :
                                     ""
                             }`}
-                               href={anchor.url}>{anchor.name}</a>
+                                  to={anchor.url}>{anchor.name}</Link>
                         </li>
                     ))}
                 </ul>
