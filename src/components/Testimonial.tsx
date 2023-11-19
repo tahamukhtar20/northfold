@@ -13,7 +13,7 @@ export default function Testimonial({
                                     }
 ) {
     return (
-        <div className="gradient-diagonal-lines border relative cursor-pointer">
+        <div className="gradient-diagonal-lines border relative">
             <div className="absolute top-0 right-0 p-4 px-10">
                 <img src={quotes} alt="quote" className="w-8 h-8"/>
             </div>
