@@ -8,6 +8,7 @@ import {HamburgerMenu} from "@/app/[lang]/components/HamburgerMenu";
 import NavLinks from "@/app/[lang]/components/NavLinks";
 import {Locale} from "@/i18n.config";
 import ThemeButton from '@/app/[lang]/components/ThemeButton'
+import LangDropDown from "@/app/[lang]/components/LangDropDown";
 
 
 export default async function Header(
@@ -59,6 +60,7 @@ export default async function Header(
                         <div className="flex flex-row items-center">
                             <HamburgerMenu/>
                             <ThemeButton/>
+                            <LangDropDown lang={lang}/>
                         </div>
                     </div>
                     <div className="justify-center items-center w-full h-fit bg-gray-100 px-20 z-50 dark:bg-slate-800">
@@ -75,6 +77,7 @@ export default async function Header(
                 <div className="flex-row h-full items-center xl:flex hidden pr-20">
                     <NavLinks anchors={anchors} orientation={"horizontal"} lang={lang}/>{/*horizontal menu*/}
                     <ThemeButton/>
+                    <LangDropDown lang={lang}/>
                 </div>
             </nav>
         </header>
