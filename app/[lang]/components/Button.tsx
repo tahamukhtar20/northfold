@@ -14,7 +14,7 @@ export default function Button({
 }) {
     return (
         <button
-            className={`bg-primary text-white font-black capitalize tracking-tight px-2 py-2 hover:bg-primary-dark transition-all ${
+            className={`bg-primary dark:bg-black hover:dark:bg-slate-800 text-white font-black capitalize tracking-tight px-2 py-2 hover:bg-primary-dark transition-all ${
                 className
             }`} onClick={onClick} type={type} {...props}>{children}
         </button>

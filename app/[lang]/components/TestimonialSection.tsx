@@ -124,14 +124,14 @@ export default function TestimonialSection(
         }
     }, []);
     return (
-        <section className="">
+        <section className="bg-white dark:bg-slate-800">
             <div className="lg:px-20 xs:px-10 px-4">
                 <h1 className="font-black sm:text-5xl xs:text-3xl text-2xl mb-8">{title}</h1>
                 <desc className="font-inconsolata">{description}
                 </desc>
             </div>
             <div
-                className="bg-white flex flex-row gap-4 my-10 overflow-x-hidden select-none cursor-grab active:cursor-grabbing"
+                className="bg-white dark:bg-slate-800 flex flex-row gap-4 my-10 overflow-x-hidden select-none cursor-grab active:cursor-grabbing"
                 ref={containerRef}>
                 {
                     testimonials.map((testimonial, index) => (

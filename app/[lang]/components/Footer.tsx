@@ -33,7 +33,7 @@ export default async function Footer({
     const newsletterSignup = (
         <div className="flex sm:flex-row flex-col gap-2">
             <input type="text"
-                   className="border border-x-0 border-t-0 border-b-gray-200 bg-secondary focus:outline-none focus:border-primary text-white sm:w-80 w-full h-10 px-2"
+                   className="border border-x-0 border-t-0 border-b-gray-200 bg-secondary focus:outline-none bg-transparent focus:border-primary text-white sm:w-80 w-full h-10 px-2"
                    placeholder="Email Address"/>
             <Button className="w-fit">Subscribe</Button>
         </div>
@@ -63,7 +63,7 @@ export default async function Footer({
     return (
         <>
             <footer
-                className="sm:flex flex-row justify-between w-full bg-secondary py-10 md:px-20 sm:px-8 px-4 -z-50 hidden ">
+                className="sm:flex flex-row justify-between w-full bg-secondary py-10 md:px-20 sm:px-8 px-4 -z-50 hidden dark:bg-black">
                 <div className="flex flex-col items-start">
                     <Image src={Logo} alt={"logo"} className="mb-8" height="64" width="64"/>
                     {quickLinks}
@@ -75,7 +75,7 @@ export default async function Footer({
                 </div>
             </footer>
             <footer
-                className="flex flex-col justify-between w-full bg-secondary py-10 md:px-20 sm:px-8 px-4 -z-50 sm:hidden">
+                className="flex flex-col justify-between w-full bg-secondary py-10 md:px-20 sm:px-8 px-4 -z-50 sm:hidden dark:bg-black">
                 <div className="flex flex-col items-start gap-4">
                     <Image src={Logo} alt={"logo"} className="mb-8" height="64" width="64"/>
                     {newsletterSignup}

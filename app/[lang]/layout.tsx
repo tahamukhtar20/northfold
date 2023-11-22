@@ -4,6 +4,8 @@ import './globals.css'
 import {i18n, Locale} from '@/i18n.config'
 import Header from "@/app/[lang]/components/Header";
 import Footer from "@/app/[lang]/components/Footer";
+import Providers from '@/app/[lang]/providers'
+
 
 const inter = Inter({subsets: ['latin']})
 
@@ -27,9 +29,11 @@ export default function RootLayout({
     return (
         <html lang={params.lang}>
         <body className={inter.className}>
-        <Header lang={params.lang}/>
-        <main className="min-h-screen">{children}</main>
-        <Footer lang={params.lang}/>
+        <Providers>
+            <Header lang={params.lang}/>
+            <main className="min-h-screen dark:bg-slate-800 bg-white">{children}</main>
+            <Footer lang={params.lang}/>
+        </Providers>
         </body>
         </html>
     )

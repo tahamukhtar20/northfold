@@ -22,14 +22,14 @@ export default function NavLinks({
     };
 
     return orientation === 'vertical' ? (
-        <ul className="flex flex-col">
+        <ul className="flex flex-col ">
             {anchors.map((anchor: { name: string; url: string }, index: number) => (
                 <li key={index} className="text-center flex items-center justify-center pb-4 z-50">
                     <Link
-                        className={`capitalize hover:text-primary ${
+                        className={`capitalize  hover:text-primary hover:dark:text-slate-400 ${
                             isActive(anchor.url)
                                 ? 'font-extrabold text-primary'
-                                : 'text-black'
+                                : 'text-black dark:text-gray-200'
                         } ${
                             anchor.name.toLowerCase() === 'contact'
                                 ? 'border border-gray-500 flex text-center py-0.5 px-2'
@@ -45,12 +45,12 @@ export default function NavLinks({
     ) : (
         <ul className="flex flex-row">
             {anchors.map((anchor: { name: string; url: string }, index: number) => (
-                <li key={index} className="ml-8 text-center flex items-center justify-center">
+                <li key={index} className="ml-8 text-center flex items-center justify-center ">
                     <Link
-                        className={`capitalize hover:text-primary ${
+                        className={`capitalize hover:text-primary hover:dark:text-slate-400 ${
                             isActive(anchor.url)
                                 ? 'font-extrabold text-primary'
-                                : 'text-black'
+                                : 'text-black dark:text-gray-200'
                         } ${
                             anchor.name.toLowerCase() === 'contact'
                                 ? 'border border-gray-500 flex text-center py-0.5 px-2'

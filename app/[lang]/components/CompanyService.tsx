@@ -14,7 +14,7 @@ export default function CompanyService({
 }) {
     return (
         <div
-            className="w-full sm:flex-row flex-col gap-4 p-4 min-h-48 flex bg-gray-100 hover:scale-[102%] transition-all ease-in-out duration-300">
+            className="w-full sm:flex-row flex-col gap-4 p-4 min-h-48 flex bg-gray-100 hover:scale-[102%] transition-all ease-in-out duration-300 dark:bg-slate-700">
             <div className="w-full justify-center flex">
                 <img src={image} alt={title} className="h-full max-h-48"/>
             </div>

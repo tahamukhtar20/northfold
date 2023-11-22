@@ -7,6 +7,7 @@ import {NewsTicker} from "@/app/[lang]/components/NewsTicker";
 import {HamburgerMenu} from "@/app/[lang]/components/HamburgerMenu";
 import NavLinks from "@/app/[lang]/components/NavLinks";
 import {Locale} from "@/i18n.config";
+import ThemeButton from '@/app/[lang]/components/ThemeButton'
 
 
 export default async function Header(
@@ -26,9 +27,9 @@ export default async function Header(
     ];
     const news = header["news"]
     return (
-        <header className="bg-gray-100 max-h-28 text-sm z-50">
+        <header className="bg-gray-100 dark:bg-slate-800 max-h-28 text-sm z-50">
             <div
-                className="h-10 flex-row items-center border-b-gray-200 border border-x-0 border-t-0 px-20 w-full justify-between xl:flex hidden z-50"
+                className="h-10 flex-row items-center dark:border-b-slate-900 border-b-gray-200 border border-x-0 border-t-0 px-20 w-full justify-between xl:flex hidden z-50"
                 id="header-top">
                 <NewsTicker news={news}/>
                 <ul className="h-full flex flex-row">
@@ -38,14 +39,16 @@ export default async function Header(
                     }, index: number) => (
                         <li key={index} className="mr-4 h-full w-10 flex">
                             <Link href={socialMediaLink.url}
-                                  className="flex h-full w-full [&>svg]:w-full [&>svg]:h-full [&>svg]:text-secondary
+                                  className="flex h-full w-full transition-all [&>svg]:w-full [&>svg]:h-full [&>svg]:text-secondary
+                                  [&>svg]:dark:text-gray-200 [&>svg]:hover:text-primary-dark
                            [&>svg]:opacity-60 p-1.5 ">{socialMediaLink.icon}</Link>
                         </li>
                     ))}
                 </ul>
             </div>
-            <nav className="flex items-center justify-between flex-wrap h-[4.5rem] z-50 w-full bg-gray-100 "
-                 id="header-bottom">
+            <nav
+                className="flex items-center justify-between flex-wrap h-[4.5rem] z-50 w-full bg-gray-100 dark:bg-slate-800"
+                id="header-bottom">
                 <div className="flex flex-col items-center xl:hidden w-full pt-1">
                     <div className="flex flex-row justify-between w-full lg:px-20 md:px-14 sm:px-10 px-6">
                         <div className="flex items-center">
@@ -53,9 +56,12 @@ export default async function Header(
                                 <Image src={logo} alt="logo" width="64" height="64"/>
                             </div>
                         </div>
-                        <HamburgerMenu/>
+                        <div className="flex flex-row items-center">
+                            <HamburgerMenu/>
+                            <ThemeButton/>
+                        </div>
                     </div>
-                    <div className="justify-center items-center w-full h-fit bg-gray-100 px-20 z-50">
+                    <div className="justify-center items-center w-full h-fit bg-gray-100 px-20 z-50 dark:bg-slate-800">
                         <div className="hidden" id="menu">
                             <NavLinks anchors={anchors} orientation={"vertical"} lang={lang}/>{/*vertical menu*/}
                         </div>
@@ -68,6 +74,7 @@ export default async function Header(
                 </div>
                 <div className="flex-row h-full items-center xl:flex hidden pr-20">
                     <NavLinks anchors={anchors} orientation={"horizontal"} lang={lang}/>{/*horizontal menu*/}
+                    <ThemeButton/>
                 </div>
             </nav>
         </header>

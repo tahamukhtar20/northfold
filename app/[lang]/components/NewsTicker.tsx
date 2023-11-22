@@ -33,13 +33,13 @@ export const NewsTicker = ({news}: { news: string[] }) => {
     }, []);
 
     return (
-        <div className="flex flex-row justify-center items-center text-secondary opacity-60">
+        <div className="flex flex-row justify-center items-center text-secondary opacity-60 dark:text-gray-200">
             <FaArrowRight/>
             <ul className="flex flex-col ml-4">
                 {news.map((newsItem, index) => (
                     <li key={index}
                         className={`mr-4 h-full flex justify-center items-center ${animationStarted && active === index ? "active__news" : "hidden"}`}>
-                        <span className="font-extrabold text-gray-900 uppercase">News! </span>
+                        <span className="font-extrabold text-gray-900 dark:text-gray-200 uppercase">News! </span>
                         <span className="flex h-full w-full p-1.5">{newsItem}</span>
                     </li>
                 ))}

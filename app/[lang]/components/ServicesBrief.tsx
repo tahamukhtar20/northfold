@@ -23,7 +23,8 @@ export default function ServicesBrief({
                                           }
 ) {
     return (
-        <section className="bg-white flex flex-col gap-4 lg:p-20 xs:p-10 p-4 relative pb-0 lg:pb-0 xs:pb-0">
+        <section
+            className="bg-white flex flex-col gap-4 lg:p-20 xs:p-10 p-4 relative pb-0 lg:pb-0 xs:pb-0 dark:bg-slate-800">
             <div className="w-1/2 h-full absolute top-0 left-0 pr-3">
                 <div className="relative w-full h-full flex flex-row justify-between">
                     <div
@@ -52,7 +53,7 @@ export default function ServicesBrief({
                         className="bg-tertiary-dark opacity-10 w-full h-1/6"></div>
                 </div>
             </div>
-            <div className="w-full h-full bg-white z-10 p-6 flex flex-col gap-4">
+            <div className="w-full h-full bg-white dark:bg-slate-950 z-10 p-6 flex flex-col gap-4">
                 <h1 className="sm:text-5xl xs:text-3xl text-2xl font-black">
                     {headline}
                 </h1>
