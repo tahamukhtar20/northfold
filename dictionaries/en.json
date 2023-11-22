@@ -1,0 +1,425 @@
+{
+    "header": {
+        "anchors": [
+            {
+                "name": "home",
+                "url": "/"
+            },
+            {
+                "name": "services",
+                "url": "/services"
+            },
+            {
+                "name": "technologies",
+                "url": "/technologies"
+            },
+            {
+                "name": "case studies",
+                "url": "/case-studies"
+            },
+            {
+                "name": "industries",
+                "url": "/industries"
+            },
+            {
+                "name": "blog",
+                "url": "/blog"
+            },
+            {
+                "name": "about us",
+                "url": "/about-us"
+            },
+            {
+                "name": "portfolio",
+                "url": "/portfolio"
+            },
+            {
+                "name": "contact",
+                "url": "/contact"
+            }
+        ],
+        "news": [
+            "Its going to rain tomorrow",
+            "this is some dummy news",
+            "this is some more dummy news"
+        ]
+    },
+    "home": {
+        "hero": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ante.",
+            "tagline": "#ExpectMore",
+            "image": "https://picsum.photos/1920"
+        },
+        "services-brief": {
+            "buttonLabel": "Contact Us",
+            "companyServices": [
+                {
+                    "image": "https://picsum.photos/1923",
+                    "title": "Lorem Ipsum",
+                    "link": "/services/something-nice",
+                    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "image": "https://picsum.photos/1924",
+                    "title": "Lorem Ipsum",
+                    "link": "/services/something-nice",
+                    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "image": "https://picsum.photos/1925",
+                    "title": "Lorem Ipsum",
+                    "link": "/services/something-nice",
+                    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "image": "https://picsum.photos/1926",
+                    "title": "Lorem Ipsum",
+                    "link": "/services/something-nice",
+                    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                }
+            ],
+            "headline": "Some Company Introduction Here Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+            "subTagline": "We can provide you these services:",
+            "lineAboveContact": "some text encouraging the customer to contact"
+        },
+        "services-summary-section": {
+            "services": [
+                {
+                    "imageUrl": "https://picsum.photos/1921",
+                    "headline": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "buttonText": "Learn More",
+                    "buttonUrl": "/services/something-nice"
+                },
+                {
+                    "imageUrl": "https://picsum.photos/1922",
+                    "headline": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "buttonText": "Learn More",
+                    "buttonUrl": "/services/something-nice"
+                }
+            ]
+        },
+        "blog-post-section": {
+            "title": "Blogs",
+            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "buttonLabel": "View All",
+            "blogPosts": [
+                {
+                    "title": "Lorem Ipsum",
+                    "tagLine": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/blog/something-nice"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "tagLine": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/blog/something-nice"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "tagLine": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/blog/something-nice"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "tagLine": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/blog/something-nice"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "tagLine": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/blog/something-nice"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "tagLine": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/blog/something-nice"
+                }
+            ]
+        },
+        "case-study-section": {
+            "title": "Case Studies",
+            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "buttonLabel": "View All",
+            "caseStudies": [
+                {
+                    "title": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/case-studies/something-nice",
+                    "image": "https://picsum.photos/1927"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/case-studies/something-nice",
+                    "image": "https://picsum.photos/1927"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/case-studies/something-nice",
+                    "image": "https://picsum.photos/1927"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/case-studies/something-nice",
+                    "image": "https://picsum.photos/1927"
+                }
+            ]
+        },
+        "testimonial-section": {
+            "title": "Testimonials",
+            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "testimonials": [
+                {
+                    "company": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "Lorem Ipsum",
+                    "title": "Lorem Ipsum"
+                },
+                {
+                    "company": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "Lorem Ipsum",
+                    "title": "Lorem Ipsum"
+                },
+                {
+                    "company": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "Lorem Ipsum",
+                    "title": "Lorem Ipsum"
+                },
+                {
+                    "company": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "Lorem Ipsum",
+                    "title": "Lorem Ipsum"
+                },
+                {
+                    "company": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "Lorem Ipsum",
+                    "title": "Lorem Ipsum"
+                },
+                {
+                    "company": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "Lorem Ipsum",
+                    "title": "Lorem Ipsum"
+                },
+                {
+                    "company": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "Lorem Ipsum",
+                    "title": "Lorem Ipsum"
+                },
+                {
+                    "company": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "name": "Lorem Ipsum",
+                    "title": "Lorem Ipsum"
+                }
+            ]
+        },
+        "contact-section": {
+            "title": "How can we help you?",
+            "nameTitle": "Name: ",
+            "emailTitle": "Business Email: ",
+            "phoneTitle": "Phone: ",
+            "buttonLabel": "Submit"
+        }
+    },
+    "services": {
+        "hero": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis antem quis ante.",
+            "tagline": "#ExpectMore2",
+            "image": "https://picsum.photos/1933"
+        },
+        "services-brief": {
+            "buttonLabel": "Contact Us",
+            "companyServices": [
+                {
+                    "image": "https://picsum.photos/1923",
+                    "title": "Lorem Ipsum",
+                    "link": "/services/something-nice",
+                    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "image": "https://picsum.photos/1924",
+                    "title": "Lorem Ipsum",
+                    "link": "/services/something-nice",
+                    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "image": "https://picsum.photos/1925",
+                    "title": "Lorem Ipsum",
+                    "link": "/services/something-nice",
+                    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "image": "https://picsum.photos/1926",
+                    "title": "Lorem Ipsum",
+                    "link": "/services/something-nice",
+                    "desc": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                }
+            ],
+            "headline": "Some Company Introduction Here Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+            "subTagline": "We can provide you these services:",
+            "lineAboveContact": "some text encouraging the customer to contact"
+        },
+        "services-tutorial": {
+            "title": "How do we work?",
+            "tutorials": [
+                {
+                    "headline": "Step 1",
+                    "imageUrl": "https://picsum.photos/1930",
+                    "bulletPoints": [
+                        "First things first – we discuss your business needs and how can we fulfill them.",
+                        "Let’s sign the NDA!",
+                        "We agree on business terms and the model of support."
+                    ]
+                },
+                {
+                    "headline": "Step 2",
+                    "imageUrl": "https://picsum.photos/1931",
+                    "bulletPoints": [
+                        "First things first – we discuss your business needs and how can we fulfill them.",
+                        "Let’s sign the NDA!",
+                        "We agree on business terms and the model of support."
+                    ]
+                },
+                {
+                    "headline": "Step 3",
+                    "imageUrl": "https://picsum.photos/1932",
+                    "bulletPoints": [
+                        "First things first – we discuss your business needs and how can we fulfill them.",
+                        "Let’s sign the NDA!",
+                        "We agree on business terms and the model of support."
+                    ]
+                }
+            ]
+        },
+        "projects": {
+            "title": "Projects",
+            "description": "You can expect us to offer these services:",
+            "servicesProjects": [
+                {
+                    "imageUrl": "https://picsum.photos/1921",
+                    "headline": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "buttonText": "Learn More",
+                    "buttonUrl": "/services/something-nice"
+                },
+                {
+                    "imageUrl": "https://picsum.photos/1922",
+                    "headline": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "buttonText": "Learn More",
+                    "buttonUrl": "/services/something-nice"
+                }
+            ]
+        }
+    },
+    "technologies": {
+        "hero": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis antem quis ante.",
+            "tagline": "#ExpectMore2",
+            "image": "https://picsum.photos/1933"
+        },
+        "technologiesIntro": {
+            "technologies": [
+                {
+                    "name": "Lorem Ipsum",
+                    "logo": "https://picsum.photos/1933",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "readMoreUrl": "/technologies/something-nice",
+                    "buttonText": "Learn More"
+                },
+                {
+                    "name": "Lorem Ipsum",
+                    "logo": "https://picsum.photos/1933",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "readMoreUrl": "/technologies/something-nice",
+                    "buttonText": "Learn More"
+                },
+                {
+                    "name": "Lorem Ipsum",
+                    "logo": "https://picsum.photos/1933",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "readMoreUrl": "/technologies/something-nice",
+                    "buttonText": "Learn More"
+                },
+                {
+                    "name": "Lorem Ipsum",
+                    "logo": "https://picsum.photos/1933",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "readMoreUrl": "/technologies/something-nice",
+                    "buttonText": "Learn More"
+                },
+                {
+                    "name": "Lorem Ipsum",
+                    "logo": "https://picsum.photos/1933",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "readMoreUrl": "/technologies/something-nice",
+                    "buttonText": "Learn More"
+                },
+                {
+                    "name": "Lorem Ipsum",
+                    "logo": "https://picsum.photos/1933",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "readMoreUrl": "/technologies/something-nice",
+                    "buttonText": "Learn More"
+                }
+            ],
+            "title": "Technologies",
+            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    },
+    "footer": {
+        "anchors": [
+            {
+                "name": "home",
+                "url": "/"
+            },
+            {
+                "name": "services",
+                "url": "/services"
+            },
+            {
+                "name": "technologies",
+                "url": "/technologies"
+            },
+            {
+                "name": "case studies",
+                "url": "/case-studies"
+            },
+            {
+                "name": "industries",
+                "url": "/industries"
+            },
+            {
+                "name": "blog",
+                "url": "/blog"
+            },
+            {
+                "name": "about us",
+                "url": "/about-us"
+            },
+            {
+                "name": "portfolio",
+                "url": "/portfolio"
+            },
+            {
+                "name": "contact",
+                "url": "/contact"
+            }
+        ]
+    }
+}
