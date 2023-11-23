@@ -1,5 +1,6 @@
 import Button from "@/app/[lang]/components/Button";
 import BlogPreview from "@/app/[lang]/components/BlogPreview";
+import Link from "next/link";
 
 export default function BlogPostSection(
     {
@@ -28,12 +29,12 @@ export default function BlogPostSection(
                 {blogPosts.map((blogPost, index) => (
                     <BlogPreview title={blogPost.title} tagLine={blogPost.tagLine}
                                  description={blogPost.description} link={blogPost.link} key={index}/>))}
-                <a href={"/blog"} className="w-fit sm:col-span-2">
+                <Link href={"/blog"} className="w-fit sm:col-span-2">
                     <Button
                         className="!bg-secondary dark:!bg-black hover:dark:!bg-gray-700 text-white hover:!bg-secondary-light px-8">
                         {buttonLabel}
                     </Button>
-                </a>
+                </Link>
             </div>
         </section>
     )

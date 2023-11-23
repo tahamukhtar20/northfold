@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Link from "next/link";
 
 export default function CaseStudyPreview({
                                              title,
@@ -6,12 +7,14 @@ export default function CaseStudyPreview({
                                              link,
                                              reverse,
                                              image,
+                                             buttonText
                                          }: {
     title: string;
     description: string;
     link: string;
     reverse?: boolean;
     image: string;
+    buttonText: string;
 }) {
     return (
         <div className={`flex ${
@@ -32,9 +35,9 @@ export default function CaseStudyPreview({
                     <h2 className="font-semibold sm:text-4xl xs:text-3xl text-2xl uppercase">{title}</h2>
                     <h3 className=" sm:font-md font-sm">{description}</h3>
                     <div className="w-full">
-                        <a href={link} className="">
-                            <Button className="bg-secondary w-1/2 hover:bg-secondary-light">Learn More</Button>
-                        </a>
+                        <Link href={link} className="">
+                            <Button className="bg-secondary w-1/2 hover:bg-secondary-light">{buttonText}</Button>
+                        </Link>
                     </div>
                 </div>
             </div>

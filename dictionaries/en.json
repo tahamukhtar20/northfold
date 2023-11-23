@@ -152,25 +152,29 @@
                     "title": "Lorem Ipsum",
                     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     "link": "/case-studies/something-nice",
-                    "image": "https://picsum.photos/1927"
+                    "image": "https://picsum.photos/1927",
+                    "buttonText": "Learn More"
                 },
                 {
                     "title": "Lorem Ipsum",
                     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     "link": "/case-studies/something-nice",
-                    "image": "https://picsum.photos/1927"
+                    "image": "https://picsum.photos/1927",
+                    "buttonText": "Learn More"
                 },
                 {
                     "title": "Lorem Ipsum",
                     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     "link": "/case-studies/something-nice",
-                    "image": "https://picsum.photos/1927"
+                    "image": "https://picsum.photos/1927",
+                    "buttonText": "Learn More"
                 },
                 {
                     "title": "Lorem Ipsum",
                     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     "link": "/case-studies/something-nice",
-                    "image": "https://picsum.photos/1927"
+                    "image": "https://picsum.photos/1927",
+                    "buttonText": "Learn More"
                 }
             ]
         },
@@ -380,6 +384,94 @@
             ],
             "title": "Technologies",
             "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    },
+    "caseStudies": {
+        "hero": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis antem quis ante.",
+            "tagline": "#ExpectMore2",
+            "image": "https://picsum.photos/1933"
+        },
+        "case-study-section": {
+            "buttonLabel": "View All",
+            "title": "Case Studies",
+            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "caseStudies": [
+                {
+                    "title": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/case-studies/something-nice",
+                    "image": "https://picsum.photos/1927",
+                    "buttonText": "Learn More"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/case-studies/something-nice",
+                    "image": "https://picsum.photos/1927",
+                    "buttonText": "Learn More"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/case-studies/something-nice",
+                    "image": "https://picsum.photos/1927",
+                    "buttonText": "Learn More"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "link": "/case-studies/something-nice",
+                    "image": "https://picsum.photos/1927",
+                    "buttonText": "Learn More"
+                }
+            ]
+        }
+    },
+    "industries": {
+        "hero": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis antem quis ante.",
+            "tagline": "#ExpectMore2",
+            "image": "https://picsum.photos/1933"
+        },
+        "industries-section": {
+            "buttonLabel": "View All",
+            "title": "Industries",
+            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "industries": [
+                {
+                    "title": "Lorem Ipsum",
+                    "image": "https://picsum.photos/1933",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "readMoreUrl": "/industries/something-nice",
+                    "buttonText": "Learn More",
+                    "link": "/industries/something-nice"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "image": "https://picsum.photos/1933",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "readMoreUrl": "/industries/something-nice",
+                    "buttonText": "Learn More",
+                    "link": "/industries/something-nice"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "image": "https://picsum.photos/1933",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "readMoreUrl": "/industries/something-nice",
+                    "buttonText": "Learn More",
+                    "link": "/industries/something-nice"
+                },
+                {
+                    "title": "Lorem Ipsum",
+                    "image": "https://picsum.photos/1933",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "readMoreUrl": "/industries/something-nice",
+                    "link": "/industries/something-nice",
+                    "buttonText": "Learn More"
+                }
+            ]
         }
     },
     "footer": {

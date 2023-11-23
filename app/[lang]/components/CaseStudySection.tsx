@@ -1,5 +1,6 @@
 import Button from "@/app/[lang]/components/Button";
 import CaseStudyPreview from "@/app/[lang]/components/CaseStudyPreview";
+import Link from "next/link";
 
 export default function CaseStudySection(
     {
@@ -13,6 +14,7 @@ export default function CaseStudySection(
             description: string,
             image: string,
             link: string
+            buttonText: string
         }[]
         title: string
         description: string
@@ -29,12 +31,12 @@ export default function CaseStudySection(
                     <CaseStudyPreview {...caseStudy} key={index}
                                       reverse={index % 2 === 0}
                     />))}
-                <a href={"/case-studies"} className="w-fit sm:col-span-2">
+                <Link href={"/case-studies"} className="w-fit sm:col-span-2">
                     <Button
                         className="!bg-secondary dark:!bg-black hover:dark:!bg-gray-700 text-white hover:!bg-secondary-light px-8">
                         {buttonLabel}
                     </Button>
-                </a>
+                </Link>
             </div>
         </section>
     )

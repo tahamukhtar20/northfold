@@ -63,7 +63,7 @@ export default function NavLinks({
                         {anchor.name}
                     </Link>
                     <div
-                        className={`w-2 h-1 bg-slate-800 self-start rounded-full transition-all group-hover:w-full group-hover:bg-primary 
+                        className={`w-2 h-1 bg-black self-start rounded-full transition-all group-hover:w-full dark:bg-white group-hover:bg-primary 
                         ${
                             isActive(anchor.url)
                                 ? '!w-full !bg-primary'

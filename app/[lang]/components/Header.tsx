@@ -53,9 +53,9 @@ export default async function Header(
                 <div className="flex flex-col items-center xl:hidden w-full pt-1">
                     <div className="flex flex-row justify-between w-full lg:px-20 md:px-14 sm:px-10 px-6">
                         <div className="flex items-center">
-                            <div className="w-16">
+                            <Link className="w-16" href={"/"}>
                                 <Image src={logo} alt="logo" width="64" height="64"/>
-                            </div>
+                            </Link>
                         </div>
                         <div className="flex flex-row items-center">
                             <HamburgerMenu/>
@@ -70,9 +70,9 @@ export default async function Header(
                     </div>
                 </div>
                 <div className="xl:flex hidden items-center justify-between flex-wrap pl-20">
-                    <div className="w-16">
+                    <Link href={"/"} className="w-16">
                         <Image src={logo} alt="logo" width="50" height="50"/>
-                    </div>
+                    </Link>
                 </div>
                 <div className="flex-row h-full items-center xl:flex hidden pr-20">
                     <NavLinks anchors={anchors} orientation={"horizontal"} lang={lang}/>{/*horizontal menu*/}

@@ -1,5 +1,6 @@
 import Button from "./Button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Technology({
                                        logo,
@@ -25,12 +26,12 @@ export default function Technology({
                     </h1>
                 </div>
                 <p className="">{description}</p>
-                <a className="w-fit self-start" href={readMoreUrl}>
+                <Link className="w-fit self-start" href={readMoreUrl}>
                     <Button
                         className="bg-transparent hover:bg-secondary-light dark:!text-gray-200 !text-secondary-dark hover:!text-white">
                         {buttonText}
                     </Button>
-                </a>
+                </Link>
             </div>
         </div>
     )
