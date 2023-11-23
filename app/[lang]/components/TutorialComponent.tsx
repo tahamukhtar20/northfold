@@ -20,10 +20,10 @@ export default function TutorialComponent(
             idx === tutorialsLength - 1 ? "lg:col-span-1 md:col-span-2" : ""
         }`}>
             <img src={imageUrl} alt="" className="w-full h-52 object-cover"/>
-            <h1 className="font-black text-gray-500 sm:text-2xl xs:text-xl text-lg uppercase">
+            <h1 className="font-semibold text-gray-500 sm:text-2xl xs:text-xl text-lg uppercase">
                 {headline}
             </h1>
-            <ul className="flex flex-col gap-2 font-inconsolata sm:text-xl xs:text-lg text-md">
+            <ul className="flex flex-col gap-2  sm:text-xl xs:text-lg text-md">
                 {
                     bulletPoints.map((bulletPoint, index) => (
                         <>

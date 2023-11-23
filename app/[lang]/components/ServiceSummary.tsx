@@ -21,8 +21,8 @@ const ServiceSummary = ({imageUrl, headline, description, buttonText, buttonUrl,
         ></div>
         <div className="h-full w-full lg:w-5/12 flex items-center gradient-effect">
             <div className="flex items-start justify-center h-full flex-col p-8 gap-8">
-                <h2 className="font-black sm:text-4xl xs:text-3xl text-2xl uppercase">{headline}</h2>
-                <desc className="font-inconsolata sm:font-md font-sm">{description}</desc>
+                <h2 className="font-semibold sm:text-4xl xs:text-3xl text-2xl uppercase">{headline}</h2>
+                <h3 className=" sm:font-md font-sm">{description}</h3>
                 <div className="w-full">
                     <a href={buttonUrl} className="">
                         <Button className="bg-secondary w-1/2 hover:bg-secondary-light">{buttonText}</Button>

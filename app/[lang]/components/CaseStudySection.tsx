@@ -22,8 +22,8 @@ export default function CaseStudySection(
     return (
         <section
             className="flex flex-col lg:px-20 xs:px-10 px-4 lg:pb-20 xs:pb-10 pb-4 gap-6 bg-white dark:bg-slate-800">
-            <h1 className="font-black sm:text-5xl xs:text-3xl text-2xl">{title}</h1>
-            <desc className="font-inconsolata">{description}</desc>
+            <h1 className="font-semibold sm:text-5xl xs:text-3xl text-2xl">{title}</h1>
+            <h3 className="">{description}</h3>
             <div className="flex flex-col gap-4 place-items-center">
                 {caseStudies.map((caseStudy, index) => (
                     <CaseStudyPreview {...caseStudy} key={index}

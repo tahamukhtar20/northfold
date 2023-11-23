@@ -20,11 +20,11 @@ export default function Technology({
             <div className="flex flex-col justify-center items-center gap-4 p-4">
                 <div className="flex flex-row items-center justify-between w-full">
                     <Image src={logo} alt="" className="object-contain" width={80} height={80}/>
-                    <h1 className="font-black dark:text-gray-200 text-slate-900 sm:text-2xl xs:text-xl text-lg uppercase">
+                    <h1 className="font-semibold dark:text-gray-200 text-slate-900 sm:text-2xl xs:text-xl text-lg uppercase">
                         {name}
                     </h1>
                 </div>
-                <p className="font-inconsolata">{description}</p>
+                <p className="">{description}</p>
                 <a className="w-fit self-start" href={readMoreUrl}>
                     <Button
                         className="bg-transparent hover:bg-secondary-light dark:!text-gray-200 !text-secondary-dark hover:!text-white">

@@ -28,7 +28,7 @@ export default async function Header(
     ];
     const news = header["news"]
     return (
-        <header className="bg-gray-100 dark:bg-slate-800 max-h-28 text-sm z-50">
+        <header className="bg-blue-100 dark:bg-black max-h-28 text-sm z-50">
             <div
                 className="h-10 flex-row items-center dark:border-b-slate-900 border-b-gray-200 border border-x-0 border-t-0 px-20 w-full justify-between xl:flex hidden z-50"
                 id="header-top">

@@ -24,8 +24,8 @@ export default async function Footer({
         <ul>
             {anchors.map((anchor, index) => (
                 <li key={index}
-                    className="text-white capitalize hover:text-primary text-sm font-black tracking-wider mb-1.5">
-                    <a href={anchor.url}>{anchor.name}</a>
+                    className="text-slate-900 dark:text-white capitalize hover:text-primary text-sm font-semibold tracking-tighter mb-1.5">
+                    <Link prefetch={true} href={anchor.url}>{anchor.name}</Link>
                 </li>
             ))}
         </ul>
@@ -33,58 +33,70 @@ export default async function Footer({
     const newsletterSignup = (
         <div className="flex sm:flex-row flex-col gap-2">
             <input type="text"
-                   className="border border-x-0 border-t-0 border-b-gray-200 bg-secondary focus:outline-none bg-transparent focus:border-primary text-white sm:w-80 w-full h-10 px-2"
+                   className="border border-x-0 border-t-0 border-b-gray-200 bg-secondary focus:outline-none bg-transparent focus:border-primary text-slate-900 dark:text-white sm:w-72 w-full h-10 px-2"
                    placeholder="Email Address"/>
-            <Button className="w-fit">Subscribe</Button>
+            <Button className="w-fit tracking-tighter">Subscribe</Button>
         </div>
     )
     const socialMediaIcons = (
-        <ul className="flex flex-row justify-end">
+        <ul className="flex lg:flex-row sm:flex-col justify-end -ml-2">
             {socialMediaLinks.map((socialMediaLink: {
                 icon: JSX.Element;
                 url: string;
             }, index: number) => (
                 <li key={index} className="mr-4 w-10 flex">
-                    <a href={socialMediaLink.url}
-                       className="flex w-full [&>svg]:w-full [&>svg]:h-10 [&>svg]:text-primary-light
-                           [&>svg]:opacity-60 p-1.5 ">{socialMediaLink.icon}</a>
+                    <Link href={socialMediaLink.url}
+                          className="flex w-full [&>svg]:w-full [&>svg]:h-10 [&>svg]:text-slate-900 [&>svg]:dark:text-white tracking-tighter
+                           [&>svg]:opacity-60 p-1.5 ">{socialMediaLink.icon}</Link>
                 </li>
             ))}
         </ul>
     )
     const termsAndConditionsPrivacyPolicyLinks = (
         <div className="flex flex-col sm:items-end items-start">
-            <Link href="#" className="text-white hover:text-primary text-sm font-black tracking-wider mb-1.5">Terms and
+            <Link href="#"
+                  className="text-slate-900 dark:text-white hover:text-primary text-sm font-semibold mb-1.5 tracking-tighter">Terms
+                and
                 Conditions</Link>
-            <Link href="#" className="text-white hover:text-primary text-sm font-black tracking-wider mb-1.5">Privacy
+            <Link href="#"
+                  className="text-slate-900 dark:text-white hover:text-primary text-sm font-semibold mb-1.5 tracking-tighter">Privacy
                 Policy</Link>
         </div>
     )
     return (
         <>
             <footer
-                className="sm:flex flex-row justify-between w-full bg-secondary py-10 md:px-20 sm:px-8 px-4 -z-50 hidden dark:bg-black">
-                <div className="flex flex-col items-start">
-                    <Image src={Logo} alt={"logo"} className="mb-8" height="64" width="64"/>
-                    {quickLinks}
-                </div>
-                <div className="flex flex-col gap-4 justify-evenly">
-                    {newsletterSignup}
-                    {termsAndConditionsPrivacyPolicyLinks}
-                    {socialMediaIcons}
+                className="sm:flex flex-row justify-between w-full bg-white py-10 md:px-20 sm:px-8 px-4 -z-50 hidden dark:bg-black">
+                <div className="w-full flex justify-between h-full pt-10 border-t-black border border-x-0 border-b-0">
+                    <div className="flex flex-col items-start ">
+                        <Image src={Logo} alt={"logo"} className="mb-8" height="64" width="64"/>
+                        {socialMediaIcons}
+                    </div>
+                    <div className="">
+                        <h1 className="text-2xl pb-4 font-semibold tracking-tighter">Site Map</h1>
+                        {quickLinks}
+                    </div>
+                    <div className="flex flex-col gap-4 justify-evenly">
+                        {newsletterSignup}
+                        {termsAndConditionsPrivacyPolicyLinks}
+                    </div>
                 </div>
             </footer>
             <footer
-                className="flex flex-col justify-between w-full bg-secondary py-10 md:px-20 sm:px-8 px-4 -z-50 sm:hidden dark:bg-black">
-                <div className="flex flex-col items-start gap-4">
-                    <Image src={Logo} alt={"logo"} className="mb-8" height="64" width="64"/>
-                    {newsletterSignup}
-                    {socialMediaIcons}
-                    {quickLinks}
-                    <br/>
-                    {termsAndConditionsPrivacyPolicyLinks}
-                </div>
-                <div className="flex flex-col gap-4 justify-evenly">
+                className="flex flex-col justify-between w-full bg-white py-10 md:px-20 sm:px-8 px-4 -z-50 sm:hidden dark:bg-black tracking-tighter">
+                <div
+                    className="w-full flex justify-between h-full pt-10 border-t-black border border-x-0 border-b-0 tracking-tighter">
+                    <div className="flex flex-col items-start gap-4 tracking-tighter">
+                        <Image src={Logo} alt={"logo"} className="mb-8" height="64" width="64"/>
+                        {newsletterSignup}
+                        {socialMediaIcons}
+                        <h1 className="text-2xl pb-4 font-semibold tracking-tighter -mb-4">Site Map</h1>
+                        {quickLinks}
+                        <br/>
+                        {termsAndConditionsPrivacyPolicyLinks}
+                    </div>
+                    <div className="flex flex-col gap-4 justify-evenly">
+                    </div>
                 </div>
             </footer>
         </>

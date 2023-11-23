@@ -19,10 +19,10 @@ export default function Testimonial({
                 <Image src={quotes} alt="quote" width={32} height={32}/>
             </div>
             <div className=" h-full flex flex-col gap-4 p-4 !w-96">
-                <h1 className="sm:text-2xl xs:text-xl text-lg font-black uppercase">{title}</h1>
-                <h2 className="sm:text-lg xs:text-md text-sm font-bold text-gray-400 uppercase">{company}</h2>
-                <p className="text-sm font-inconsolata">{description}</p>
-                <h3 className="text-sm font-bold">{name}</h3>
+                <h1 className="sm:text-2xl xs:text-xl text-lg font-semibold uppercase">{title}</h1>
+                <h2 className="sm:text-lg xs:text-md text-sm font-semibold text-gray-400 uppercase">{company}</h2>
+                <p className="text-sm ">{description}</p>
+                <h3 className="text-sm font-semibold">{name}</h3>
             </div>
         </div>
     )

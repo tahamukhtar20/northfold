@@ -47,10 +47,10 @@ export default function TechnologiesIntro({
                 </div>
             </div>
             <div className="w-full h-full bg-white dark:bg-slate-950  z-10 p-6 flex flex-col gap-4">
-                <h1 className="sm:text-5xl xs:text-3xl text-2xl font-black">
+                <h1 className="sm:text-5xl xs:text-3xl text-2xl font-semibold">
                     {title}
                 </h1>
-                <h2 className="sm:text-xl xs:text-md text-sm font-bold">{description}</h2>
+                <h2 className="sm:text-xl xs:text-md text-sm font-semibold">{description}</h2>
                 <div className="gap-4 mt-8 grid-cols-3 grid">
                     {
                         technologies.map((technology, index) => (

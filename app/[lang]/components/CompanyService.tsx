@@ -19,8 +19,8 @@ export default function CompanyService({
                 <img src={image} alt={title} className="h-full max-h-48"/>
             </div>
             <div className="flex flex-col pl-4 gap-4 justify-between">
-                <h1 className="sm:text-2xl xs:text-xl text-lg uppercase font-black">{title}</h1>
-                <desc className="font-inconsolata">{desc}</desc>
+                <h1 className="sm:text-2xl xs:text-xl text-lg uppercase font-semibold">{title}</h1>
+                <h3 className="">{desc}</h3>
                 <Link href={link} className="w-fit z-10">
                     <Button className="bg-secondary text-white hover:bg-secondary-light">Learn More</Button>
                 </Link>

@@ -54,10 +54,10 @@ export default function ServicesBrief({
                 </div>
             </div>
             <div className="w-full h-full bg-white dark:bg-slate-950 z-10 p-6 flex flex-col gap-4">
-                <h1 className="sm:text-5xl xs:text-3xl text-2xl font-black">
+                <h1 className="sm:text-5xl xs:text-3xl text-2xl font-semibold">
                     {headline}
                 </h1>
-                <h2 className="sm:text-xl xs:text-md text-sm font-bold">{subTagline}</h2>
+                <h2 className="sm:text-xl xs:text-md text-sm font-semibold">{subTagline}</h2>
                 <div className="flex flex-col gap-4 mt-8">
                     {
                         companyServices.map((companyService, index) => (
@@ -70,7 +70,7 @@ export default function ServicesBrief({
             <div className="p-4 flex-col flex gap-2">
                 <div className="w-full h-full flex flex-row gap-2">
                     <div className="w-2 min-h-full bg-primary-dark"/>
-                    <h2 className="sm:text-xl xs:text-md text-sm font-bold">{lineAboveContact}</h2>
+                    <h2 className="sm:text-xl xs:text-md text-sm font-semibold">{lineAboveContact}</h2>
                 </div>
                 <Link className="w-fit z-10 " href={"/contact"}>
                     <Button>
