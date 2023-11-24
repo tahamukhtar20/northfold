@@ -474,6 +474,95 @@
             ]
         }
     },
+    "contact": {
+        "hero": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis antem quis ante.",
+            "tagline": "#ExpectMore2",
+            "image": "https://picsum.photos/1933"
+        },
+        "contact-section": {
+            "title": "or contact us directly",
+            "nameTitle": "Name: ",
+            "emailTitle": "Business Email: ",
+            "phoneTitle": "Phone: ",
+            "buttonLabel": "Submit"
+        },
+        "title": "Contact Us",
+        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "address": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "email": "email@example.com",
+        "phone": "+44123456789"
+    },
+    "aboutUs": {
+        "hero": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis antem quis ante.",
+            "tagline": "#ExpectMore2",
+            "image": "https://picsum.photos/1933"
+        },
+        "company-intro": {
+            "centerQuote": "some quote representing the company here",
+            "title": "History",
+            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "profiles": [
+                {
+                    "image": "https://picsum.photos/1933",
+                    "name": "lorem ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "image": "https://picsum.photos/1933",
+                    "name": "lorem ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "image": "https://picsum.photos/1933",
+                    "name": "lorem ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "image": "https://picsum.photos/1933",
+                    "name": "lorem ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "image": "https://picsum.photos/1933",
+                    "name": "lorem ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "image": "https://picsum.photos/1933",
+                    "name": "lorem ipsum",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                }
+            ],
+            "timelines": [
+                {
+                    "title": "Timeline 1",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "date": "2019"
+                },
+                {
+                    "title": "Timeline 1",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "date": "2019"
+                },
+                {
+                    "title": "Timeline 1",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "date": "2019"
+                },
+                {
+                    "title": "Timeline 1",
+                    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "date": "2019"
+                }
+            ],
+            "ourVision": {
+                "title": "Our Vision",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            }
+        }
+    },
     "footer": {
         "anchors": [
             {
