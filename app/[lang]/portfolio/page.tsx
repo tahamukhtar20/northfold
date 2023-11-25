@@ -15,7 +15,7 @@ export default async function Page({params: {lang}}: {
     return (
         <>
             <Hero  {...portfolio["hero"]} />
-            <Projects projects={portfolio["projects"]} buttonText={portfolio["buttonText"]}/>
+            <Projects projects={portfolio["projects"]}/>
 
         </>
     )
