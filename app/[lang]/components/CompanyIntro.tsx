@@ -7,7 +7,8 @@ export default function CompanyIntro({
                                          centerQuote,
                                          timelines,
                                          profiles,
-                                         ourVision
+                                         ourVision,
+                                         ourAchievements
                                      }: {
     title: string
     description: string
@@ -23,6 +24,10 @@ export default function CompanyIntro({
         description: string
     }[]
     ourVision: {
+        title: string
+        description: string
+    }
+    ourAchievements: {
         title: string
         description: string
     }
@@ -46,6 +51,10 @@ export default function CompanyIntro({
             <div className="w-full flex flex-col gap-4">
                 <h1 className="sm:text-4xl font-bold xs:text-2xl text-xl text-start self-start">{ourVision.title}</h1>
                 <p className="sm:text-lg text-md text-start">{ourVision.description}</p>
+            </div>
+            <div className="w-full flex flex-col gap-4 mt-8">
+                <h1 className="sm:text-4xl font-bold xs:text-2xl text-xl text-start self-start">{ourAchievements.title}</h1>
+                <p className="sm:text-lg text-md text-start">{ourAchievements.description}</p>
             </div>
         </section>
     )

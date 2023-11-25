@@ -560,8 +560,155 @@
             "ourVision": {
                 "title": "Our Vision",
                 "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            "ourAchievements": {
+                "title": "Our Achievements",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             }
         }
+    },
+    "blog": {
+        "hero": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis antem quis ante.",
+            "tagline": "#ExpectMore2",
+            "image": "https://picsum.photos/1933"
+        },
+        "featured-blog": {
+            "title": "Featured Blog",
+            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "image": "https://picsum.photos/1933",
+            "link": "/blog/something-nice",
+            "buttonText": "Learn More"
+        },
+        "blogs": [
+            {
+                "title": "Lorem Ipsum",
+                "tagLine": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "link": "/blog/something-nice",
+                "category": "category 1",
+                "archived": true
+            },
+            {
+                "title": "Lorem Ipsum",
+                "tagLine": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "link": "/blog/something-nice",
+                "category": "category 1",
+                "archived": false
+            },
+            {
+                "title": "Lorem Ipsum",
+                "tagLine": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "link": "/blog/something-nice",
+                "category": "category 1",
+                "archived": false
+            },
+            {
+                "title": "Lorem Ipsum",
+                "tagLine": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "link": "/blog/something-nice",
+                "archived": false,
+                "category": "category 2"
+            },
+            {
+                "title": "Lorem Ipsum",
+                "tagLine": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "link": "/blog/something-nice",
+                "archived": false,
+                "category": "category 2"
+            },
+            {
+                "title": "Lorem Ipsum",
+                "tagLine": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "link": "/blog/something-nice",
+                "archived": false,
+                "category": "category 2"
+            },
+            {
+                "title": "Lorem Ipsum",
+                "tagLine": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "link": "/blog/something-nice",
+                "archived": false,
+                "category": "category 2"
+            },
+            {
+                "title": "Lorem Ipsum",
+                "tagLine": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "link": "/blog/something-nice",
+                "archived": false,
+                "category": "category 2"
+            },
+            {
+                "title": "Lorem Ipsum",
+                "tagLine": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "link": "/blog/something-nice",
+                "archived": false,
+                "category": "category 2"
+            },
+            {
+                "title": "Lorem Ipsum",
+                "tagLine": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "link": "/blog/something-nice",
+                "archived": false,
+                "category": "category 2"
+            },
+            {
+                "title": "Lorem Ipsum",
+                "tagLine": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "link": "/blog/something-nice",
+                "archived": false,
+                "category": "category 2"
+            }
+        ]
+    },
+    "portfolio": {
+        "hero": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis antem quis ante.",
+            "tagline": "#ExpectMore2",
+            "image": "https://picsum.photos/1933"
+        },
+        "projects": [
+            {
+                "title": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "technologies": [
+                    "technology 1",
+                    "technology 2",
+                    "technology 3"
+                ],
+                "link": "/portfolio/something-nice"
+            },
+            {
+                "title": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "technologies": [
+                    "technology 1",
+                    "technology 2",
+                    "technology 3"
+                ],
+                "link": "/portfolio/something-nice"
+            },
+            {
+                "title": "Lorem Ipsum",
+                "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "technologies": [
+                    "technology 1",
+                    "technology 2",
+                    "technology 3"
+                ],
+                "link": "/portfolio/something-nice"
+            }
+        ]
     },
     "footer": {
         "anchors": [
