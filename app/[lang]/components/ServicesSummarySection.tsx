@@ -16,10 +16,11 @@ export default function ServicesSummarySection({
         <section className="bg-white flex flex-col gap-4 lg:p-20 xs:p-10 p-4 dark:bg-slate-800">
             {
                 services.map((service, index) => (
-                    <div className="static z-10">
+                    <div className="static z-10"
+                         key={index}
+                    >
                         <ServiceSummary
                             reverse={index % 2 === 0}
-                            key={index}
                             imageUrl={service.imageUrl}
                             headline={service.headline}
                             description={service.description}

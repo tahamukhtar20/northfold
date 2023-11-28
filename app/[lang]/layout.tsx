@@ -1,13 +1,16 @@
 import type {Metadata} from 'next'
-import {Poppins, Quicksand} from 'next/font/google'
+import {Quicksand} from 'next/font/google'
 import './globals.css'
+import localFont from 'next/font/local'
 import {i18n, Locale} from '@/i18n.config'
 import Header from "@/app/[lang]/components/Header";
 import Footer from "@/app/[lang]/components/Footer";
 import Providers from '@/app/[lang]/providers'
 import {NextFont} from "next/dist/compiled/@next/font";
 
-const poppins = Poppins({subsets: ['latin'], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]})
+const commuterSans: NextFont = localFont({
+    src: "../../public/hinted-CommutersSans-Regular (1).woff2",
+})
 const quicksand: NextFont = Quicksand({weight: ["300", "400", "500", "600", "700"], subsets: ['latin']})
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -28,8 +31,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang={params.lang}>
-        {/*<body className={poppins.className}>*/}
-        <body className="font-primary">
+        <body className={`${commuterSans.className}`}>
         <Providers>
             <Header lang={params.lang}/>
             <main className="min-h-screen dark:bg-slate-800 bg-white">{children}</main>
