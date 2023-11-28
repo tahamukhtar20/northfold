@@ -1,8 +1,6 @@
 import Hero from "@/app/[lang]/components/Hero";
 import {Locale} from "@/i18n.config";
 import {getDictionary} from "@/lib/dictionary";
-import FeaturedBlog from "@/app/[lang]/components/FeaturedBlog";
-import Blogs from "@/app/[lang]/components/Blogs";
 import React from "react";
 import Projects from "@/app/[lang]/components/Projects";
 

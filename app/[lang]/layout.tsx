@@ -7,7 +7,6 @@ import Footer from "@/app/[lang]/components/Footer";
 import Providers from '@/app/[lang]/providers'
 import {NextFont} from "next/dist/compiled/@next/font";
 
-
 const poppins = Poppins({subsets: ['latin'], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]})
 const quicksand: NextFont = Quicksand({weight: ["300", "400", "500", "600", "700"], subsets: ['latin']})
 export const metadata: Metadata = {
@@ -29,7 +28,8 @@ export default function RootLayout({
 }) {
     return (
         <html lang={params.lang}>
-        <body className={poppins.className}>
+        {/*<body className={poppins.className}>*/}
+        <body className="font-primary">
         <Providers>
             <Header lang={params.lang}/>
             <main className="min-h-screen dark:bg-slate-800 bg-white">{children}</main>

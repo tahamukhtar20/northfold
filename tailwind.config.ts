@@ -21,7 +21,7 @@ const config: Config = {
                 'tertiary-dark': '#0096a7',
             },
             fontFamily: {
-                'inconsolata': ['Inconsolata'],
+                'primary': ['CommuterSans'],
             },
         }
     },
