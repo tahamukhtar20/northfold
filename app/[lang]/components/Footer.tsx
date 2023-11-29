@@ -66,7 +66,7 @@ export default async function Footer({
     return (
         <>
             <footer
-                className="sm:flex flex-row justify-between w-full bg-white py-10 md:px-20 sm:px-8 px-4 -z-50 hidden dark:bg-black">
+                className="sm:flex flex-row justify-between w-full bg-white py-10 md:px-20 sm:px-8 px-4 -z-50 hidden dark:bg-black mt-10">
                 <div className="w-full flex justify-between h-full pt-10 border-t-black border border-x-0 border-b-0">
                     <div className="flex flex-col items-start ">
                         <Image src={Logo} alt={"logo"} className="mb-8" height="64" width="64"/>
