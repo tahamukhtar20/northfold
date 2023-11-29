@@ -58,9 +58,9 @@ export default async function Header(
                             </Link>
                         </div>
                         <div className="flex flex-row items-center">
-                            <HamburgerMenu/>
-                            <ThemeButton/>
                             <LangDropDown lang={lang}/>
+                            <ThemeButton/>
+                            <HamburgerMenu/>
                         </div>
                     </div>
                     <div className="justify-center items-center w-full h-fit bg-gray-100 px-20 z-50 dark:bg-slate-800">
@@ -76,8 +76,11 @@ export default async function Header(
                 </div>
                 <div className="flex-row h-full items-center xl:flex hidden pr-20">
                     <NavLinks anchors={anchors} orientation={"horizontal"} lang={lang}/>{/*horizontal menu*/}
-                    <ThemeButton/>
-                    <LangDropDown lang={lang}/>
+                    <div className="w-fit h-fit flex flex-row mb-1">
+                        <ThemeButton/>
+                        <LangDropDown lang={lang}/>
+                    </div>
+
                 </div>
             </nav>
         </header>

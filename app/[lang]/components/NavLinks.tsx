@@ -54,23 +54,29 @@ export default function NavLinks({
                         isActive(anchor.url)
                             ? 'hover:scale-[105%] font-extrabold text-primary'
                             : 'hover:scale-[105%] text-black dark:text-gray-200'
+                    } ${
+                        anchor.url === '/contact'
+                            ? 'border border-gray-500 flex text-center py-1.5 px-4 rounded hover:border-white hover:bg-primary hover:text-white rounded-tr-2xl rounded-bl-2xl mb-1'
+                            : ""
                     }`}
                 >
                     <Link
-                        className={`capitalize hover:text-primary hover:dark:text-slate-400`}
+                        className={`capitalize`}
                         href={anchor.url} prefetch={true}
                     >
                         {anchor.name}
                     </Link>
                     <div
-                        className={`w-0 h-1 bg-black self-start rounded-full transition-all group-hover:w-full dark:bg-white group-hover:bg-primary 
+                        className={`w-0 h-1 bg-black self-start rounded-full transition-all duration-500 group-hover:w-full dark:bg-white group-hover:bg-primary 
                         ${
                             isActive(anchor.url)
                                 ? '!w-full !bg-primary'
                                 : ''
-                        }
-                        `
-                        }
+                        } ${
+                            anchor.url === '/contact'
+                                ? 'hidden'
+                                : ""
+                        }`}
                     ></div>
                 </li>
             ))}

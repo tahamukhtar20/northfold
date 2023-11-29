@@ -1,9 +1,47 @@
 {
+    "slugOne": {
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "content": [
+            {
+                "type": "title-content",
+                "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            },
+            {
+                "type": "title-content-image",
+                "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "image": "https://picsum.photos/1920"
+            },
+            {
+                "type": "title-content-image-bulletPoints",
+                "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "bulletPoints": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+                ],
+                "image": "https://picsum.photos/1920"
+            },
+            {
+                "type": "title-content-bulletPoints",
+                "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "bulletPoints": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+                ]
+            }
+        ]
+    },
     "header": {
         "anchors": [
             {
-                "name": "home",
-                "url": "/"
+                "name": "about us",
+                "url": "/about-us"
             },
             {
                 "name": "services",
@@ -24,14 +62,6 @@
             {
                 "name": "blog",
                 "url": "/blog"
-            },
-            {
-                "name": "about us",
-                "url": "/about-us"
-            },
-            {
-                "name": "portfolio",
-                "url": "/portfolio"
             },
             {
                 "name": "contact",
@@ -237,7 +267,9 @@
             "nameTitle": "Name: ",
             "emailTitle": "Business Email: ",
             "phoneTitle": "Phone: ",
-            "buttonLabel": "Submit"
+            "buttonLabel": "Submit",
+            "CompanyTitle": "Company: ",
+            "NumberOfEmployeesTitle": "Number of Employees: "
         }
     },
     "services": {
@@ -485,7 +517,9 @@
             "nameTitle": "Name: ",
             "emailTitle": "Business Email: ",
             "phoneTitle": "Phone: ",
-            "buttonLabel": "Submit"
+            "buttonLabel": "Submit",
+            "CompanyTitle": "Company: ",
+            "NumberOfEmployeesTitle": "Number of Employees: "
         },
         "title": "Contact Us",
         "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -713,8 +747,8 @@
     "footer": {
         "anchors": [
             {
-                "name": "home",
-                "url": "/"
+                "name": "about us",
+                "url": "/about-us"
             },
             {
                 "name": "services",
@@ -735,14 +769,6 @@
             {
                 "name": "blog",
                 "url": "/blog"
-            },
-            {
-                "name": "about us",
-                "url": "/about-us"
-            },
-            {
-                "name": "portfolio",
-                "url": "/portfolio"
             },
             {
                 "name": "contact",
