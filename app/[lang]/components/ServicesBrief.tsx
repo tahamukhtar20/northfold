@@ -72,7 +72,7 @@ export default function ServicesBrief({
                     <div className="w-2 min-h-full bg-primary-dark"/>
                     <h2 className="sm:text-xl xs:text-md text-sm font-semibold">{lineAboveContact}</h2>
                 </div>
-                <Link className="w-fit z-10 " href={"/contact"}>
+                <Link className="w-fit z-10 " href={"/contact"} prefetch={true}>
                     <Button>
                         {buttonLabel}
                     </Button>

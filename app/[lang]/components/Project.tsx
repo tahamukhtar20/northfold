@@ -18,7 +18,7 @@ export default function Project({
                     <li className="bg-gray-200 dark:bg-slate-600 px-2 py-1 rounded-md" key={index}>{technology}</li>
                 ))}
             </ul>
-            <Link href={link} className="self-end">
+            <Link href={link} className="self-end" prefetch={true}>
                 <Button
                     className="!bg-transparent !text-secondary hover:!bg-gray-300 dark:!text-gray-200 hover:dark:!text-slate-900">
                     Read More

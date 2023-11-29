@@ -45,7 +45,7 @@ export default async function Footer({
                 url: string;
             }, index: number) => (
                 <li key={index} className="mr-4 w-10 flex">
-                    <Link href={socialMediaLink.url}
+                    <Link href={socialMediaLink.url} prefetch={true}
                           className="flex w-full [&>svg]:w-full [&>svg]:h-10 [&>svg]:text-slate-900 [&>svg]:dark:text-white tracking-tighter
                            [&>svg]:opacity-60 p-1.5 ">{socialMediaLink.icon}</Link>
                 </li>

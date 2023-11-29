@@ -29,7 +29,7 @@ export default function BlogPostSection(
                 {blogPosts.map((blogPost, index) => (
                     <BlogPreview title={blogPost.title} tagLine={blogPost.tagLine}
                                  description={blogPost.description} link={blogPost.link} key={index}/>))}
-                <Link href={"/blog"} className="w-fit sm:col-span-2">
+                <Link href={"/blog"} className="w-fit sm:col-span-2" prefetch={true}>
                     <Button
                         className="!bg-secondary dark:!bg-black hover:dark:!bg-gray-700 text-white hover:!bg-secondary-light px-8">
                         {buttonLabel}

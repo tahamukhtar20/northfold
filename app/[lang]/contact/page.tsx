@@ -45,7 +45,7 @@ export default async function Page({
                     url: string;
                 }, index: number) => (
                     <li key={index} className="mr-4 h-full w-10 flex">
-                        <Link href={socialMediaLink.url}
+                        <Link href={socialMediaLink.url} prefetch={true}
                               className="flex h-full w-full transition-all [&>svg]:w-full [&>svg]:h-full [&>svg]:text-secondary
                                   [&>svg]:dark:text-gray-200 [&>svg]:hover:text-primary-dark
                            [&>svg]:opacity-60 p-1.5 ">{socialMediaLink.icon}</Link>

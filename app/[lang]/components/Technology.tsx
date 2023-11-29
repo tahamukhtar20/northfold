@@ -26,7 +26,7 @@ export default function Technology({
                     </h1>
                 </div>
                 <p className="">{description}</p>
-                <Link className="w-fit self-start" href={readMoreUrl}>
+                <Link className="w-fit self-start" href={readMoreUrl} prefetch={true}>
                     <Button
                         className="bg-transparent hover:bg-secondary-light dark:!text-gray-200 !text-secondary-dark hover:!text-white">
                         {buttonText}
