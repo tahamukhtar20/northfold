@@ -61,16 +61,16 @@ export default function ContactSection({
     return (
         <form
             onSubmit={handleSubmit}
-            className="lg:px-20 xs:px-10 px-4 lg:pb-20 xs:pb-10 pb-4 flex flex-col bg-white dark:bg-slate-800 justify-center items-center gap-4 border rounded-2xl mx-4 py-4 border-black"
+            className="lg:px-20 border border-gray-200 bg-gray-50 m-2 rounded-2xl xs:px-10 px-4 lg:pb-20 xs:pb-10 pb-4 flex flex-col shadow dark:bg-slate-800 justify-center items-center gap-8 py-4"
         >
             <h1 className="font-semibold sm:text-5xl xs:text-3xl text-2xl p-0.5 text-start w-full my-8">
                 {title}
             </h1>
             <div className="w-full flex flex-row">
-                <label className="sm:text-2xl xs:text-lg text-md">{nameTitle}</label>
                 <input
                     type="text"
                     name="name"
+                    placeholder={nameTitle}
                     required
                     value={formData.name}
                     onChange={handleChange}
@@ -78,11 +78,9 @@ export default function ContactSection({
                 />
             </div>
             <div className="w-full flex flex-row">
-                <label className="sm:text-2xl xs:text-lg text-md whitespace-nowrap">
-                    {emailTitle}
-                </label>
                 <input
                     type="text"
+                    placeholder={emailTitle}
                     name="email"
                     required
                     value={formData.email}
@@ -91,12 +89,11 @@ export default function ContactSection({
                 />
             </div>
             <div className="w-full flex flex-row">
-                <label className="sm:text-2xl xs:text-lg text-md whitespace-nowrap">
-                    {CompanyTitle}
-                </label>
+
                 <input
                     type="text"
                     name="company"
+                    placeholder={CompanyTitle}
                     required
                     value={formData.company}
                     onChange={handleChange}
@@ -104,22 +101,20 @@ export default function ContactSection({
                 />
             </div>
             <div className="w-full flex flex-row">
-                <label className="sm:text-2xl xs:text-lg text-md whitespace-nowrap">
-                    {NumberOfEmployeesTitle}
-                </label>
                 <input
                     type="text"
                     name="employees"
                     required
+                    placeholder={NumberOfEmployeesTitle}
                     value={formData.employees}
                     onChange={handleChange}
                     className="w-full border border-x-0 border-t-0 border-secondary focus:outline-0 rounded-none bg-transparent"
                 />
             </div>
             <div className="w-full flex flex-row">
-                <label className="sm:text-2xl xs:text-lg text-md">{phoneTitle}</label>
                 <input
                     type="text"
+                    placeholder={phoneTitle}
                     required
                     name="phone"
                     value={formData.phone}

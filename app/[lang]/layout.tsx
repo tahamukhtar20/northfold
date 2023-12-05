@@ -31,10 +31,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang={params.lang}>
-        <body className={`${commuterSans.className}`}>
+        <body className={`${commuterSans.className}  dark:bg-slate-800 bg-white`}>
         <Providers>
             <Header lang={params.lang}/>
-            <main className="min-h-screen dark:bg-slate-800 bg-white">{children}</main>
+            <main className="min-h-screen">{children}</main>
             <Footer lang={params.lang}/>
         </Providers>
         </body>

@@ -56,7 +56,7 @@ export default function NavLinks({
                             : 'hover:scale-[105%] text-black dark:text-gray-200'
                     } ${
                         anchor.url === '/contact'
-                            ? 'border border-gray-500 flex text-center py-1.5 px-4 rounded hover:border-white hover:bg-primary hover:text-white rounded-tr-2xl rounded-bl-2xl mb-1'
+                            ? 'border border-gray-500 flex text-center py-1.5 px-4 rounded hover:border-white hover:bg-primary hover:text-white rounded-br-2xl rounded-tl-2xl mb-1'
                             : ""
                     }`}
                 >

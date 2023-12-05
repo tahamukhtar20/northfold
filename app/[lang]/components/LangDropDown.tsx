@@ -62,7 +62,7 @@ export default function LangDropDown({lang}: { lang: Locale }) {
 
             {isOpen && (
                 <div
-                    className="absolute top-[100%] z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                    className="absolute top-[100%] z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-full dark:bg-gray-700"
                     onMouseEnter={openDropdown}
                     onMouseLeave={closeDropdown}
                 >

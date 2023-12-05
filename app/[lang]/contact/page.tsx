@@ -29,30 +29,37 @@ export default async function Page({
     return (
         <>
             <Hero {...contact["hero"]}/>
-            <div className="px-20 flex flex-col gap-4 py-5">
-                <h1 className="sm:text-5xl xs:text-3xl text-2xl font-semibold capitalize">{contact.title}</h1>
-                <h2 className="sm:text-xl xs:text-md text-sm font-semibold">{contact.description}
-                </h2>
-            </div>
-            <ul className="flex flex-col px-20 pb-8 max-w-xl gap-2">
-                <li>{contact.address}</li>
-                <li>{contact.email}</li>
-                <li>{contact.phone}</li>
-            </ul>
-            <ul className="h-full flex flex-row px-20 -ml-2">
-                {socialMediaLinks.map((socialMediaLink: {
-                    icon: JSX.Element;
-                    url: string;
-                }, index: number) => (
-                    <li key={index} className="mr-4 h-full w-10 flex">
-                        <Link href={socialMediaLink.url} prefetch={true}
-                              className="flex h-full w-full transition-all [&>svg]:w-full [&>svg]:h-full [&>svg]:text-secondary
+            <div className="w-full flex flex-col lg:flex-row mb-4">
+                <div
+                    className="w-full gap-8 flex flex-col my-8 lg:px-20 xs:px-10 px-4 lg:pb-20 xs:pb-10 pb-4">
+                    <div className="flex flex-col gap-4 py-5">
+                        <h1 className="sm:text-5xl xs:text-3xl text-2xl font-semibold capitalize">{contact.title}</h1>
+                        <h2 className="sm:text-xl xs:text-md text-sm font-semibold">{contact.description}
+                        </h2>
+                    </div>
+                    <ul className="flex flex-col pb-8 max-w-xl gap-2">
+                        <li>{contact.address}</li>
+                        <li>{contact.email}</li>
+                        <li>{contact.phone}</li>
+                    </ul>
+                    <ul className="flex flex-row">
+                        {socialMediaLinks.map((socialMediaLink: {
+                            icon: JSX.Element;
+                            url: string;
+                        }, index: number) => (
+                            <li key={index} className="mr-4 h-full w-10 flex">
+                                <Link href={socialMediaLink.url} prefetch={true}
+                                      className="flex h-full w-full transition-all [&>svg]:w-full [&>svg]:h-full [&>svg]:text-secondary
                                   [&>svg]:dark:text-gray-200 [&>svg]:hover:text-primary-dark
                            [&>svg]:opacity-60 p-1.5 ">{socialMediaLink.icon}</Link>
-                    </li>
-                ))}
-            </ul>
-            <ContactSection {...contact["contact-section"]}/>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="w-full">
+                    <ContactSection {...contact["contact-section"]}/>
+                </div>
+            </div>
             <MapsComponent/>
         </>
     )

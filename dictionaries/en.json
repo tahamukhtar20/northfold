@@ -80,6 +80,11 @@
             "tagline": "#ExpectMore",
             "image": "https://picsum.photos/1920"
         },
+        "title": "Contact Us",
+        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "address": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "email": "email@example.com",
+        "phone": "+44123456789",
         "services-brief": {
             "buttonLabel": "Contact Us",
             "companyServices": [
@@ -513,7 +518,7 @@
             "image": "https://picsum.photos/1933"
         },
         "contact-section": {
-            "title": "or contact us directly",
+            "title": "Let's get in touch",
             "nameTitle": "Name: ",
             "emailTitle": "Business Email: ",
             "phoneTitle": "Phone: ",
