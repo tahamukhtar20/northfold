@@ -30,7 +30,7 @@ export default function LangDropDown({lang}: { lang: Locale }) {
     const closeDropdown = () => setIsOpen(false);
 
     return (
-        <div className="relative flex flex-col items-center justify-center md:px-2 w-full h-full"
+        <div className="relative flex flex-col items-center justify-center ml-2 w-full h-full"
              onMouseLeave={closeDropdown}>
             <button
                 className="text-black bg-primary-light font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
@@ -62,7 +62,7 @@ export default function LangDropDown({lang}: { lang: Locale }) {
 
             {isOpen && (
                 <div
-                    className="absolute top-[100%] z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-full dark:bg-gray-700"
+                    className="absolute top-[100%] z-10 bg-white divide-y divide-gray-100  rounded-lg shadow w-full dark:bg-gray-700"
                     onMouseEnter={openDropdown}
                     onMouseLeave={closeDropdown}
                 >
