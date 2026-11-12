@@ -1,0 +1,1095 @@
+{
+ "version": 1,
+ "name": "Northfold",
+ "ticker": [
+  {
+   "en": "Case study: a booking system for 40 freight depots",
+   "de": "Fallstudie: ein Buchungssystem für 40 Frachtdepots"
+  },
+  {
+   "en": "We are hiring a senior backend engineer in Manchester",
+   "de": "Wir suchen eine Senior-Backend-Entwicklerin oder einen -Entwickler in Manchester"
+  }
+ ],
+ "nav": [
+  {
+   "label": {
+    "en": "Services",
+    "de": "Leistungen"
+   },
+   "page": "services"
+  },
+  {
+   "label": {
+    "en": "Work",
+    "de": "Projekte"
+   },
+   "page": "work"
+  },
+  {
+   "label": {
+    "en": "Journal",
+    "de": "Journal"
+   },
+   "page": "journal"
+  },
+  {
+   "label": {
+    "en": "About",
+    "de": "Über uns"
+   },
+   "page": "about"
+  }
+ ],
+ "footer": {
+  "en": "Northfold is a fictional studio. This site is an anonymised client project by Taha Mukhtar, rebuilt as a demo of a block-based content editor.",
+  "de": "Northfold ist ein fiktives Studio. Diese Website ist ein anonymisiertes Kundenprojekt von Taha Mukhtar, neu gebaut als Demo eines blockbasierten Inhaltseditors."
+ },
+ "pages": [
+  {
+   "id": "home",
+   "kind": "page",
+   "slug": "",
+   "title": {
+    "en": "Home",
+    "de": "Startseite"
+   },
+   "summary": {
+    "en": "Northfold builds and runs booking, logistics and internal software.",
+    "de": "Northfold entwickelt und betreibt Buchungs-, Logistik- und interne Software."
+   },
+   "blocks": [
+    {
+     "id": "b1",
+     "type": "hero",
+     "data": {
+      "heading": {
+       "en": "We build and run booking, logistics and internal software.",
+       "de": "Wir entwickeln und betreiben Buchungs-, Logistik- und interne Software."
+      },
+      "intro": {
+       "en": "Northfold is a studio of fourteen engineers and designers in Manchester. Most of our clients are UK companies with a few hundred staff and a process that outgrew its spreadsheets.",
+       "de": "Northfold ist ein Studio mit vierzehn Entwicklerinnen, Entwicklern und Designern in Manchester. Die meisten unserer Kunden sind britische Unternehmen mit einigen hundert Beschäftigten und einem Ablauf, der seinen Tabellen entwachsen ist."
+      },
+      "buttons": [
+       {
+        "link": {
+         "label": {
+          "en": "Start a project",
+          "de": "Projekt anfragen"
+         },
+         "href": "/contact"
+        }
+       },
+       {
+        "link": {
+         "label": {
+          "en": "See our work",
+          "de": "Unsere Arbeit"
+         },
+         "href": "/work"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "id": "b2",
+     "type": "stats",
+     "data": {
+      "items": [
+       {
+        "value": "14",
+        "label": {
+         "en": "engineers and designers",
+         "de": "Entwickler und Designer"
+        }
+       },
+       {
+        "value": "62",
+        "label": {
+         "en": "systems shipped since 2016",
+         "de": "ausgelieferte Systeme seit 2016"
+        }
+       },
+       {
+        "value": "9 yrs",
+        "label": {
+         "en": "average client relationship",
+         "de": "durchschnittliche Kundenbeziehung"
+        }
+       },
+       {
+        "value": "99.97%",
+        "label": {
+         "en": "uptime across hosted systems",
+         "de": "Verfügbarkeit der betriebenen Systeme"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "id": "b3",
+     "type": "cards",
+     "data": {
+      "heading": {
+       "en": "What we do",
+       "de": "Was wir tun"
+      },
+      "intro": {
+       "en": "Three kinds of work, usually in this order.",
+       "de": "Drei Arten von Arbeit, meist in dieser Reihenfolge."
+      },
+      "items": [
+       {
+        "kicker": {
+         "en": "01 · Discovery",
+         "de": "01 · Analyse"
+        },
+        "title": {
+         "en": "Map the process",
+         "de": "Den Ablauf verstehen"
+        },
+        "text": {
+         "en": "Two to four weeks with the people who do the work, ending in a written plan and a clickable prototype.",
+         "de": "Zwei bis vier Wochen mit den Menschen, die die Arbeit machen, mit einem schriftlichen Plan und einem klickbaren Prototyp am Ende."
+        }
+       },
+       {
+        "kicker": {
+         "en": "02 · Build",
+         "de": "02 · Entwicklung"
+        },
+        "title": {
+         "en": "Ship in small releases",
+         "de": "In kleinen Schritten ausliefern"
+        },
+        "text": {
+         "en": "Fortnightly releases to real users from the first month, with tests and monitoring from day one.",
+         "de": "Alle zwei Wochen ein Release für echte Nutzer ab dem ersten Monat, mit Tests und Monitoring vom ersten Tag an."
+        }
+       },
+       {
+        "kicker": {
+         "en": "03 · Run",
+         "de": "03 · Betrieb"
+        },
+        "title": {
+         "en": "Host and support",
+         "de": "Betreiben und betreuen"
+        },
+        "text": {
+         "en": "We operate what we build: on-call, upgrades and a named engineer for each system.",
+         "de": "Wir betreiben, was wir bauen: Bereitschaft, Updates und eine feste Ansprechperson für jedes System."
+        }
+       }
+      ]
+     }
+    },
+    {
+     "id": "b4",
+     "type": "pageList",
+     "data": {
+      "heading": {
+       "en": "Selected work",
+       "de": "Ausgewählte Projekte"
+      },
+      "intro": {
+       "en": "Recent systems we built and still run.",
+       "de": "Systeme, die wir zuletzt gebaut haben und weiterhin betreiben."
+      },
+      "kind": "case",
+      "limit": "3"
+     }
+    },
+    {
+     "id": "b5",
+     "type": "quote",
+     "data": {
+      "text": {
+       "en": "A depot lost its network at 2 a.m. on a Saturday. Northfold had bookings switched to the offline queue before our night manager finished the phone call.",
+       "de": "Ein Depot verlor an einem Samstag um zwei Uhr nachts das Netz. Northfold hatte die Buchungen auf die Offline-Warteschlange umgestellt, bevor unser Nachtschichtleiter aufgelegt hatte."
+      },
+      "name": "Priya Raman",
+      "role": {
+       "en": "Operations director, Halden Freight",
+       "de": "Leiterin Betrieb, Halden Freight"
+      }
+     }
+    },
+    {
+     "id": "b6",
+     "type": "cta",
+     "data": {
+      "heading": {
+       "en": "Tell us what the process looks like today.",
+       "de": "Erzählen Sie uns, wie der Ablauf heute aussieht."
+      },
+      "intro": {
+       "en": "A short call is enough to tell whether we are the right studio for it. We reply within two working days.",
+       "de": "Ein kurzes Gespräch reicht, um zu sehen, ob wir das richtige Studio dafür sind. Wir antworten innerhalb von zwei Werktagen."
+      },
+      "button": {
+       "label": {
+        "en": "Start a project",
+        "de": "Projekt anfragen"
+       },
+       "href": "/contact"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "services",
+   "kind": "page",
+   "slug": "services",
+   "title": {
+    "en": "Services",
+    "de": "Leistungen"
+   },
+   "summary": {
+    "en": "Discovery, build and long-term operation of business software.",
+    "de": "Analyse, Entwicklung und langfristiger Betrieb von Unternehmenssoftware."
+   },
+   "blocks": [
+    {
+     "id": "b7",
+     "type": "hero",
+     "data": {
+      "heading": {
+       "en": "One team from the first workshop to the night shift.",
+       "de": "Ein Team vom ersten Workshop bis zur Nachtschicht."
+      },
+      "intro": {
+       "en": "We take on a small number of systems and stay with them. The engineers who build your software are the ones who answer when it needs attention.",
+       "de": "Wir übernehmen wenige Systeme und bleiben dabei. Die Menschen, die Ihre Software bauen, sind auch die, die sich melden, wenn sie Aufmerksamkeit braucht."
+      },
+      "buttons": [
+       {
+        "link": {
+         "label": {
+          "en": "Start a project",
+          "de": "Projekt anfragen"
+         },
+         "href": "/contact"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "id": "b8",
+     "type": "steps",
+     "data": {
+      "heading": {
+       "en": "How a project runs",
+       "de": "So läuft ein Projekt ab"
+      },
+      "intro": {
+       "en": "A typical first release takes three to five months.",
+       "de": "Ein erstes Release dauert typischerweise drei bis fünf Monate."
+      },
+      "items": [
+       {
+        "when": {
+         "en": "Weeks 1–4",
+         "de": "Woche 1–4"
+        },
+        "title": {
+         "en": "Discovery",
+         "de": "Analyse"
+        },
+        "text": {
+         "en": "We sit with the people who do the work, map the process and write down what the first release must do.",
+         "de": "Wir arbeiten neben den Menschen, die die Arbeit machen, zeichnen den Ablauf auf und halten fest, was das erste Release können muss."
+        }
+       },
+       {
+        "when": {
+         "en": "Weeks 5–8",
+         "de": "Woche 5–8"
+        },
+        "title": {
+         "en": "Prototype",
+         "de": "Prototyp"
+        },
+        "text": {
+         "en": "A clickable prototype tested with five to ten users, and a fixed price for the first release.",
+         "de": "Ein klickbarer Prototyp, getestet mit fünf bis zehn Nutzern, und ein Festpreis für das erste Release."
+        }
+       },
+       {
+        "when": {
+         "en": "Months 3–5",
+         "de": "Monat 3–5"
+        },
+        "title": {
+         "en": "First release",
+         "de": "Erstes Release"
+        },
+        "text": {
+         "en": "Built in two-week cycles, used by a pilot team from the first cycle, then rolled out site by site.",
+         "de": "Gebaut in Zwei-Wochen-Zyklen, ab dem ersten Zyklus von einem Pilotteam genutzt, dann Standort für Standort eingeführt."
+        }
+       },
+       {
+        "when": {
+         "en": "After launch",
+         "de": "Nach dem Start"
+        },
+        "title": {
+         "en": "Run and improve",
+         "de": "Betreiben und verbessern"
+        },
+        "text": {
+         "en": "Hosting, on-call and a monthly release of improvements, on a yearly contract you can end with three months' notice.",
+         "de": "Hosting, Bereitschaft und monatliche Verbesserungen, im Jahresvertrag mit drei Monaten Kündigungsfrist."
+        }
+       }
+      ]
+     }
+    },
+    {
+     "id": "b9",
+     "type": "cards",
+     "data": {
+      "heading": {
+       "en": "Where we fit",
+       "de": "Wofür wir passen"
+      },
+      "intro": {
+       "en": "The kinds of systems we know well.",
+       "de": "Systeme, die wir gut kennen."
+      },
+      "items": [
+       {
+        "title": {
+         "en": "Bookings and scheduling",
+         "de": "Buchung und Terminplanung"
+        },
+        "text": {
+         "en": "Slots, capacity, reminders and the rules that make them hard.",
+         "de": "Zeitfenster, Kapazitäten, Erinnerungen und die Regeln, die sie schwierig machen."
+        }
+       },
+       {
+        "title": {
+         "en": "Logistics and stock",
+         "de": "Logistik und Lager"
+        },
+        "text": {
+         "en": "Depots, routes, scanning and the paperwork around them.",
+         "de": "Depots, Touren, Scannen und der Papierkram drumherum."
+        }
+       },
+       {
+        "title": {
+         "en": "Internal tools",
+         "de": "Interne Werkzeuge"
+        },
+        "text": {
+         "en": "Replacing the spreadsheet that five departments edit at once.",
+         "de": "Ersatz für die Tabelle, die fünf Abteilungen gleichzeitig bearbeiten."
+        }
+       }
+      ]
+     }
+    },
+    {
+     "id": "b10",
+     "type": "cta",
+     "data": {
+      "heading": {
+       "en": "Tell us what the process looks like today.",
+       "de": "Erzählen Sie uns, wie der Ablauf heute aussieht."
+      },
+      "intro": {
+       "en": "A short call is enough to tell whether we are the right studio for it. We reply within two working days.",
+       "de": "Ein kurzes Gespräch reicht, um zu sehen, ob wir das richtige Studio dafür sind. Wir antworten innerhalb von zwei Werktagen."
+      },
+      "button": {
+       "label": {
+        "en": "Start a project",
+        "de": "Projekt anfragen"
+       },
+       "href": "/contact"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "work",
+   "kind": "page",
+   "slug": "work",
+   "title": {
+    "en": "Work",
+    "de": "Projekte"
+   },
+   "summary": {
+    "en": "Systems we built and still run.",
+    "de": "Systeme, die wir gebaut haben und weiterhin betreiben."
+   },
+   "blocks": [
+    {
+     "id": "b24",
+     "type": "hero",
+     "data": {
+      "heading": {
+       "en": "Systems we built and still run.",
+       "de": "Systeme, die wir gebaut haben und weiterhin betreiben."
+      },
+      "intro": {
+       "en": "A few of the 62 systems we have shipped since 2016. Client names are used with permission.",
+       "de": "Einige der 62 Systeme, die wir seit 2016 ausgeliefert haben. Kundennamen mit Erlaubnis."
+      }
+     }
+    },
+    {
+     "id": "b25",
+     "type": "pageList",
+     "data": {
+      "heading": {
+       "en": "Case studies",
+       "de": "Fallstudien"
+      },
+      "intro": {
+       "en": ""
+      },
+      "kind": "case",
+      "limit": "all"
+     }
+    },
+    {
+     "id": "b26",
+     "type": "cta",
+     "data": {
+      "heading": {
+       "en": "Tell us what the process looks like today.",
+       "de": "Erzählen Sie uns, wie der Ablauf heute aussieht."
+      },
+      "intro": {
+       "en": "A short call is enough to tell whether we are the right studio for it. We reply within two working days.",
+       "de": "Ein kurzes Gespräch reicht, um zu sehen, ob wir das richtige Studio dafür sind. Wir antworten innerhalb von zwei Werktagen."
+      },
+      "button": {
+       "label": {
+        "en": "Start a project",
+        "de": "Projekt anfragen"
+       },
+       "href": "/contact"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "case-freight",
+   "kind": "case",
+   "slug": "halden-freight",
+   "date": "2026-06-18",
+   "title": {
+    "en": "A booking system for 40 freight depots",
+    "de": "Ein Buchungssystem für 40 Frachtdepots"
+   },
+   "summary": {
+    "en": "Halden Freight replaced phone and email bookings with a system depots can use offline.",
+    "de": "Halden Freight hat Buchungen per Telefon und E-Mail durch ein System ersetzt, das Depots auch offline nutzen können."
+   },
+   "blocks": [
+    {
+     "id": "b11",
+     "type": "hero",
+     "data": {
+      "heading": {
+       "en": "A booking system for 40 freight depots",
+       "de": "Ein Buchungssystem für 40 Frachtdepots"
+      },
+      "intro": {
+       "en": "Halden Freight replaced phone and email bookings with a system depots can use offline.",
+       "de": "Halden Freight hat Buchungen per Telefon und E-Mail durch ein System ersetzt, das Depots auch offline nutzen können."
+      }
+     }
+    },
+    {
+     "id": "b12",
+     "type": "facts",
+     "data": {
+      "items": [
+       {
+        "label": {
+         "en": "Client",
+         "de": "Kunde"
+        },
+        "value": {
+         "en": "Halden Freight",
+         "de": "Halden Freight"
+        }
+       },
+       {
+        "label": {
+         "en": "Sector",
+         "de": "Branche"
+        },
+        "value": {
+         "en": "Logistics",
+         "de": "Logistik"
+        }
+       },
+       {
+        "label": {
+         "en": "Duration",
+         "de": "Dauer"
+        },
+        "value": {
+         "en": "5 months to first release",
+         "de": "5 Monate bis zum ersten Release"
+        }
+       },
+       {
+        "label": {
+         "en": "Since",
+         "de": "Seit"
+        },
+        "value": {
+         "en": "2021, still running",
+         "de": "2021, weiterhin in Betrieb"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "id": "b13",
+     "type": "text",
+     "data": {
+      "heading": {
+       "en": "What we did",
+       "de": "Was wir gemacht haben"
+      },
+      "body": {
+       "en": "Halden's 40 depots took bookings by phone and email and copied them into a shared spreadsheet each evening. Double bookings cost them around 300 hours of rework a month.\n\nWe built a booking system that each depot runs on a tablet. It works without a connection and syncs when the network returns, because rural depots lose signal several times a week.\n\n- Bookings went from 11 minutes to under 2 minutes each\n- Double bookings dropped from about 90 a month to 3\n- The system has run 4 years with 99.98% availability",
+       "de": "Die 40 Depots von Halden nahmen Buchungen per Telefon und E-Mail an und übertrugen sie abends in eine gemeinsame Tabelle. Doppelbuchungen kosteten rund 300 Stunden Nacharbeit im Monat.\n\nWir haben ein Buchungssystem gebaut, das jedes Depot auf einem Tablet nutzt. Es funktioniert ohne Verbindung und gleicht ab, sobald das Netz zurück ist, denn ländliche Depots verlieren mehrmals pro Woche den Empfang.\n\n- Eine Buchung dauert jetzt unter 2 statt 11 Minuten\n- Doppelbuchungen sanken von etwa 90 auf 3 im Monat\n- Das System läuft seit 4 Jahren mit 99,98 % Verfügbarkeit"
+      }
+     }
+    },
+    {
+     "id": "b14",
+     "type": "quote",
+     "data": {
+      "text": {
+       "en": "We stopped talking about the booking system. That is the best thing I can say about it.",
+       "de": "Wir reden nicht mehr über das Buchungssystem. Das ist das Beste, was ich darüber sagen kann."
+      },
+      "name": "Priya Raman",
+      "role": {
+       "en": "Operations director, Halden Freight",
+       "de": "Leiterin Betrieb, Halden Freight"
+      }
+     }
+    },
+    {
+     "id": "b15",
+     "type": "cta",
+     "data": {
+      "heading": {
+       "en": "Tell us what the process looks like today.",
+       "de": "Erzählen Sie uns, wie der Ablauf heute aussieht."
+      },
+      "intro": {
+       "en": "A short call is enough to tell whether we are the right studio for it. We reply within two working days.",
+       "de": "Ein kurzes Gespräch reicht, um zu sehen, ob wir das richtige Studio dafür sind. Wir antworten innerhalb von zwei Werktagen."
+      },
+      "button": {
+       "label": {
+        "en": "Start a project",
+        "de": "Projekt anfragen"
+       },
+       "href": "/contact"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "case-clinic",
+   "kind": "case",
+   "slug": "kestrel-physio",
+   "date": "2025-11-03",
+   "title": {
+    "en": "Scheduling for a chain of 22 physiotherapy clinics",
+    "de": "Terminplanung für 22 Physiotherapie-Praxen"
+   },
+   "summary": {
+    "en": "Kestrel Physio moved from a paper diary per clinic to shared scheduling with text reminders.",
+    "de": "Kestrel Physio ist vom Papierkalender pro Praxis zu gemeinsamer Terminplanung mit SMS-Erinnerungen gewechselt."
+   },
+   "blocks": [
+    {
+     "id": "b16",
+     "type": "hero",
+     "data": {
+      "heading": {
+       "en": "Scheduling for a chain of 22 physiotherapy clinics",
+       "de": "Terminplanung für 22 Physiotherapie-Praxen"
+      },
+      "intro": {
+       "en": "Kestrel Physio moved from a paper diary per clinic to shared scheduling with text reminders.",
+       "de": "Kestrel Physio ist vom Papierkalender pro Praxis zu gemeinsamer Terminplanung mit SMS-Erinnerungen gewechselt."
+      }
+     }
+    },
+    {
+     "id": "b17",
+     "type": "facts",
+     "data": {
+      "items": [
+       {
+        "label": {
+         "en": "Client",
+         "de": "Kunde"
+        },
+        "value": {
+         "en": "Kestrel Physio",
+         "de": "Kestrel Physio"
+        }
+       },
+       {
+        "label": {
+         "en": "Sector",
+         "de": "Branche"
+        },
+        "value": {
+         "en": "Healthcare",
+         "de": "Gesundheit"
+        }
+       },
+       {
+        "label": {
+         "en": "Duration",
+         "de": "Dauer"
+        },
+        "value": {
+         "en": "4 months to first release",
+         "de": "4 Monate bis zum ersten Release"
+        }
+       },
+       {
+        "label": {
+         "en": "Since",
+         "de": "Seit"
+        },
+        "value": {
+         "en": "2023",
+         "de": "2023"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "id": "b18",
+     "type": "text",
+     "data": {
+      "heading": {
+       "en": "What we did",
+       "de": "Was wir gemacht haben"
+      },
+      "body": {
+       "en": "Each Kestrel clinic kept its own diary, so a patient could not be moved to a nearby clinic with free time. One in seven appointments was missed.\n\nWe built shared scheduling across all 22 clinics, with reminders by text two days and two hours before each appointment, and a waiting list that offers freed slots automatically.\n\n- Missed appointments fell from 14% to 5%\n- Front desks spend about an hour less on the phone each day",
+       "de": "Jede Kestrel-Praxis führte ihren eigenen Kalender, sodass Patienten nicht in eine nahe Praxis mit freien Terminen wechseln konnten. Jeder siebte Termin wurde versäumt.\n\nWir haben eine gemeinsame Terminplanung für alle 22 Praxen gebaut, mit SMS-Erinnerungen zwei Tage und zwei Stunden vor jedem Termin und einer Warteliste, die frei gewordene Termine automatisch anbietet.\n\n- Versäumte Termine sanken von 14 % auf 5 %\n- Die Empfangsteams telefonieren täglich etwa eine Stunde weniger"
+      }
+     }
+    },
+    {
+     "id": "b19",
+     "type": "cta",
+     "data": {
+      "heading": {
+       "en": "Tell us what the process looks like today.",
+       "de": "Erzählen Sie uns, wie der Ablauf heute aussieht."
+      },
+      "intro": {
+       "en": "A short call is enough to tell whether we are the right studio for it. We reply within two working days.",
+       "de": "Ein kurzes Gespräch reicht, um zu sehen, ob wir das richtige Studio dafür sind. Wir antworten innerhalb von zwei Werktagen."
+      },
+      "button": {
+       "label": {
+        "en": "Start a project",
+        "de": "Projekt anfragen"
+       },
+       "href": "/contact"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "case-wholesale",
+   "kind": "case",
+   "slug": "marlow-foods",
+   "date": "2025-03-21",
+   "title": {
+    "en": "Stock and picking for a food wholesaler",
+    "de": "Lager und Kommissionierung für einen Lebensmittelgroßhändler"
+   },
+   "summary": {
+    "en": "Marlow Foods replaced a 15-year-old stock database with scanning and live stock levels.",
+    "de": "Marlow Foods hat eine 15 Jahre alte Lagerdatenbank durch Scannen und Echtzeit-Bestände ersetzt."
+   },
+   "blocks": [
+    {
+     "id": "b20",
+     "type": "hero",
+     "data": {
+      "heading": {
+       "en": "Stock and picking for a food wholesaler",
+       "de": "Lager und Kommissionierung für einen Lebensmittelgroßhändler"
+      },
+      "intro": {
+       "en": "Marlow Foods replaced a 15-year-old stock database with scanning and live stock levels.",
+       "de": "Marlow Foods hat eine 15 Jahre alte Lagerdatenbank durch Scannen und Echtzeit-Bestände ersetzt."
+      }
+     }
+    },
+    {
+     "id": "b21",
+     "type": "facts",
+     "data": {
+      "items": [
+       {
+        "label": {
+         "en": "Client",
+         "de": "Kunde"
+        },
+        "value": {
+         "en": "Marlow Foods",
+         "de": "Marlow Foods"
+        }
+       },
+       {
+        "label": {
+         "en": "Sector",
+         "de": "Branche"
+        },
+        "value": {
+         "en": "Wholesale",
+         "de": "Großhandel"
+        }
+       },
+       {
+        "label": {
+         "en": "Duration",
+         "de": "Dauer"
+        },
+        "value": {
+         "en": "6 months to first release",
+         "de": "6 Monate bis zum ersten Release"
+        }
+       },
+       {
+        "label": {
+         "en": "Since",
+         "de": "Seit"
+        },
+        "value": {
+         "en": "2022",
+         "de": "2022"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "id": "b22",
+     "type": "text",
+     "data": {
+      "heading": {
+       "en": "What we did",
+       "de": "Was wir gemacht haben"
+      },
+      "body": {
+       "en": "Marlow's stock levels were updated once a night, so the sales team sold items that had already left the warehouse. Short deliveries were the most common complaint.\n\nWe built handheld scanning for picking and receiving, and a stock service that sales and the warehouse both read in real time. The old database ran alongside for two months until the figures matched.\n\n- Short deliveries fell by 70%\n- Stock counts take one day a quarter instead of three",
+       "de": "Bei Marlow wurden die Bestände einmal pro Nacht aktualisiert, sodass der Vertrieb Ware verkaufte, die das Lager schon verlassen hatte. Unvollständige Lieferungen waren die häufigste Beschwerde.\n\nWir haben Handscanner für Kommissionierung und Wareneingang eingeführt und einen Bestandsdienst gebaut, den Vertrieb und Lager in Echtzeit lesen. Die alte Datenbank lief zwei Monate parallel, bis die Zahlen übereinstimmten.\n\n- Unvollständige Lieferungen gingen um 70 % zurück\n- Die Inventur dauert einen Tag pro Quartal statt drei"
+      }
+     }
+    },
+    {
+     "id": "b23",
+     "type": "cta",
+     "data": {
+      "heading": {
+       "en": "Tell us what the process looks like today.",
+       "de": "Erzählen Sie uns, wie der Ablauf heute aussieht."
+      },
+      "intro": {
+       "en": "A short call is enough to tell whether we are the right studio for it. We reply within two working days.",
+       "de": "Ein kurzes Gespräch reicht, um zu sehen, ob wir das richtige Studio dafür sind. Wir antworten innerhalb von zwei Werktagen."
+      },
+      "button": {
+       "label": {
+        "en": "Start a project",
+        "de": "Projekt anfragen"
+       },
+       "href": "/contact"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "journal",
+   "kind": "page",
+   "slug": "journal",
+   "title": {
+    "en": "Journal",
+    "de": "Journal"
+   },
+   "summary": {
+    "en": "Notes on how we build and run software.",
+    "de": "Notizen dazu, wie wir Software bauen und betreiben."
+   },
+   "blocks": [
+    {
+     "id": "b31",
+     "type": "hero",
+     "data": {
+      "heading": {
+       "en": "Notes on how we work.",
+       "de": "Notizen zu unserer Arbeitsweise."
+      },
+      "intro": {
+       "en": "Written by the engineers and designers at Northfold.",
+       "de": "Geschrieben von den Entwicklern und Designern bei Northfold."
+      }
+     }
+    },
+    {
+     "id": "b32",
+     "type": "pageList",
+     "data": {
+      "heading": {
+       "en": "All posts",
+       "de": "Alle Beiträge"
+      },
+      "intro": {
+       "en": ""
+      },
+      "kind": "post",
+      "limit": "all"
+     }
+    }
+   ]
+  },
+  {
+   "id": "post-releases",
+   "kind": "post",
+   "slug": "why-we-release-every-two-weeks",
+   "date": "2026-09-02",
+   "title": {
+    "en": "Why we release every two weeks",
+    "de": "Warum wir alle zwei Wochen ausliefern"
+   },
+   "summary": {
+    "en": "Small releases are easier to test, easier to undo and easier to explain to the people using them.",
+    "de": "Kleine Releases sind leichter zu testen, leichter rückgängig zu machen und leichter zu erklären."
+   },
+   "blocks": [
+    {
+     "id": "b27",
+     "type": "hero",
+     "data": {
+      "heading": {
+       "en": "Why we release every two weeks",
+       "de": "Warum wir alle zwei Wochen ausliefern"
+      },
+      "intro": {
+       "en": "Small releases are easier to test, easier to undo and easier to explain to the people using them.",
+       "de": "Kleine Releases sind leichter zu testen, leichter rückgängig zu machen und leichter zu erklären."
+      }
+     }
+    },
+    {
+     "id": "b28",
+     "type": "text",
+     "data": {
+      "body": {
+       "en": "Every system we run gets a release every second Tuesday. The rhythm matters more than the size: a release with one fix still goes out on the day.\n\nA two-week release is small enough that one person can review all of it. When something goes wrong we know which change caused it, and undoing it is a single step.\n\nThe people using the software also know when to expect changes. We send a short note the day before, written for them rather than for us.\n\n- Releases go out on Tuesday mornings, never on Fridays\n- Every release can be rolled back in under five minutes\n- Each release note fits on one screen",
+       "de": "Jedes System, das wir betreiben, bekommt jeden zweiten Dienstag ein Release. Der Rhythmus zählt mehr als der Umfang: Auch ein Release mit nur einer Korrektur geht am Stichtag raus.\n\nEin Zwei-Wochen-Release ist klein genug, dass eine Person es vollständig prüfen kann. Wenn etwas schiefgeht, wissen wir, welche Änderung es war, und das Zurücknehmen ist ein einziger Schritt.\n\nAuch die Menschen, die die Software nutzen, wissen, wann sich etwas ändert. Wir schicken am Vortag eine kurze Notiz, geschrieben für sie und nicht für uns.\n\n- Releases gehen dienstagmorgens raus, nie freitags\n- Jedes Release lässt sich in unter fünf Minuten zurücknehmen\n- Jede Release-Notiz passt auf einen Bildschirm"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "post-oncall",
+   "kind": "post",
+   "slug": "running-what-we-build",
+   "date": "2026-05-14",
+   "title": {
+    "en": "Running what we build",
+    "de": "Betreiben, was wir bauen"
+   },
+   "summary": {
+    "en": "How a fourteen-person studio covers on-call for the systems it hosts.",
+    "de": "Wie ein Studio mit vierzehn Leuten die Bereitschaft für seine Systeme abdeckt."
+   },
+   "blocks": [
+    {
+     "id": "b29",
+     "type": "hero",
+     "data": {
+      "heading": {
+       "en": "Running what we build",
+       "de": "Betreiben, was wir bauen"
+      },
+      "intro": {
+       "en": "How a fourteen-person studio covers on-call for the systems it hosts.",
+       "de": "Wie ein Studio mit vierzehn Leuten die Bereitschaft für seine Systeme abdeckt."
+      }
+     }
+    },
+    {
+     "id": "b30",
+     "type": "text",
+     "data": {
+      "body": {
+       "en": "We host most of the systems we build, so someone at Northfold is always on call. With fourteen people that means each engineer is on call about one week in eight.\n\nAlerts go to the engineer on call first and to the system's named engineer second. Most alerts are handled in under fifteen minutes, and every alert outside working hours gets a short write-up the next morning.\n\nThe write-ups are the useful part. Each one ends with a change that makes the same alert less likely, and that change goes into the next release.",
+       "de": "Wir betreiben die meisten Systeme, die wir bauen, also hat bei Northfold immer jemand Bereitschaft. Bei vierzehn Leuten ist jede Person etwa eine von acht Wochen dran.\n\nAlarme gehen zuerst an die Person in Bereitschaft und dann an die feste Ansprechperson des Systems. Die meisten Alarme sind in unter fünfzehn Minuten erledigt, und jeder Alarm außerhalb der Arbeitszeit bekommt am nächsten Morgen einen kurzen Bericht.\n\nDie Berichte sind der nützliche Teil. Jeder endet mit einer Änderung, die denselben Alarm unwahrscheinlicher macht, und diese Änderung kommt ins nächste Release."
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "about",
+   "kind": "page",
+   "slug": "about",
+   "title": {
+    "en": "About",
+    "de": "Über uns"
+   },
+   "summary": {
+    "en": "A studio of fourteen in Manchester, founded in 2016.",
+    "de": "Ein Studio mit vierzehn Leuten in Manchester, gegründet 2016."
+   },
+   "blocks": [
+    {
+     "id": "b33",
+     "type": "hero",
+     "data": {
+      "heading": {
+       "en": "A studio of fourteen, founded in 2016.",
+       "de": "Ein Studio mit vierzehn Leuten, gegründet 2016."
+      },
+      "intro": {
+       "en": "Northfold started as three engineers who kept being asked to look after the systems they had built. It still works that way.",
+       "de": "Northfold begann mit drei Entwicklern, die immer wieder gebeten wurden, sich um die Systeme zu kümmern, die sie gebaut hatten. So arbeiten wir bis heute."
+      }
+     }
+    },
+    {
+     "id": "b34",
+     "type": "stats",
+     "data": {
+      "items": [
+       {
+        "value": "2016",
+        "label": {
+         "en": "founded in Manchester",
+         "de": "in Manchester gegründet"
+        }
+       },
+       {
+        "value": "14",
+        "label": {
+         "en": "people, no account managers",
+         "de": "Menschen, keine Account-Manager"
+        }
+       },
+       {
+        "value": "8",
+        "label": {
+         "en": "clients at any one time",
+         "de": "Kunden gleichzeitig"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "id": "b35",
+     "type": "text",
+     "data": {
+      "heading": {
+       "en": "How we choose work",
+       "de": "Wie wir Projekte auswählen"
+      },
+      "body": {
+       "en": "We work with eight clients at a time and take on one or two new systems a year. That keeps every system with an engineer who knows it well.\n\nWe say no to projects we would not want to run for five years. We would rather recommend another studio than take on work we cannot look after.",
+       "de": "Wir arbeiten mit acht Kunden gleichzeitig und übernehmen ein bis zwei neue Systeme pro Jahr. So bleibt jedes System bei jemandem, der es gut kennt.\n\nWir sagen Nein zu Projekten, die wir nicht fünf Jahre lang betreiben wollen. Lieber empfehlen wir ein anderes Studio, als Arbeit anzunehmen, um die wir uns nicht kümmern können."
+      }
+     }
+    },
+    {
+     "id": "b36",
+     "type": "cta",
+     "data": {
+      "heading": {
+       "en": "Tell us what the process looks like today.",
+       "de": "Erzählen Sie uns, wie der Ablauf heute aussieht."
+      },
+      "intro": {
+       "en": "A short call is enough to tell whether we are the right studio for it. We reply within two working days.",
+       "de": "Ein kurzes Gespräch reicht, um zu sehen, ob wir das richtige Studio dafür sind. Wir antworten innerhalb von zwei Werktagen."
+      },
+      "button": {
+       "label": {
+        "en": "Start a project",
+        "de": "Projekt anfragen"
+       },
+       "href": "/contact"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "contact",
+   "kind": "page",
+   "slug": "contact",
+   "title": {
+    "en": "Contact",
+    "de": "Kontakt"
+   },
+   "summary": {
+    "en": "Get in touch about a project.",
+    "de": "Sprechen Sie uns zu einem Projekt an."
+   },
+   "blocks": [
+    {
+     "id": "b37",
+     "type": "contact",
+     "data": {
+      "heading": {
+       "en": "Tell us about the process.",
+       "de": "Erzählen Sie uns vom Ablauf."
+      },
+      "intro": {
+       "en": "Describe what happens today and what goes wrong. We reply within two working days.",
+       "de": "Beschreiben Sie, was heute passiert und was dabei schiefgeht. Wir antworten innerhalb von zwei Werktagen."
+      },
+      "email": "hello@northfold.example",
+      "phone": "+44 161 000 0000",
+      "address": {
+       "en": "Northfold Studio\n3 Jutland Street\nManchester M1 2BE",
+       "de": "Northfold Studio\n3 Jutland Street\nManchester M1 2BE"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}
