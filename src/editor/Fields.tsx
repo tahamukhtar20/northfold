@@ -115,7 +115,7 @@ function LinkField(props: Props) {
 function SelectField({ field, value, path, onChange, idBase }: Props) {
   if (field.kind !== "select") return null;
   const id = `${idBase}-${fmt(path)}`;
-  const names: Record<string, string> = { case: "Case studies", post: "Journal posts", all: "All" };
+  const names: Record<string, string> = { case: "Case studies", post: "Journal posts", all: "All", none: "None", network: "Live booking network" };
   return (
     <div className="field">
       <div className="field-head">

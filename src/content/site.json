@@ -42,8 +42,8 @@
   }
  ],
  "footer": {
-  "en": "Northfold is a fictional studio. This site is an anonymised client project by Taha Mukhtar, rebuilt as a demo of a block-based content editor.",
-  "de": "Northfold ist ein fiktives Studio. Diese Website ist ein anonymisiertes Kundenprojekt von Taha Mukhtar, neu gebaut als Demo eines blockbasierten Inhaltseditors."
+  "en": "Northfold is a fictional studio. This site is an anonymised client project by tahamukhtar20, rebuilt as a demo of a block-based content editor.",
+  "de": "Northfold ist ein fiktives Studio. Diese Website ist ein anonymisiertes Kundenprojekt von tahamukhtar20, neu gebaut als Demo eines blockbasierten Inhaltseditors."
  },
  "pages": [
   {
@@ -90,7 +90,8 @@
          "href": "/work"
         }
        }
-      ]
+      ],
+      "visual": "network"
      }
     },
     {
@@ -276,7 +277,8 @@
          "href": "/contact"
         }
        }
-      ]
+      ],
+      "visual": "none"
      }
     },
     {
@@ -444,7 +446,8 @@
       "intro": {
        "en": "A few of the 62 systems we have shipped since 2016. Client names are used with permission.",
        "de": "Einige der 62 Systeme, die wir seit 2016 ausgeliefert haben. Kundennamen mit Erlaubnis."
-      }
+      },
+      "visual": "none"
      }
     },
     {
@@ -510,7 +513,8 @@
       "intro": {
        "en": "Halden Freight replaced phone and email bookings with a system depots can use offline.",
        "de": "Halden Freight hat Buchungen per Telefon und E-Mail durch ein System ersetzt, das Depots auch offline nutzen können."
-      }
+      },
+      "visual": "none"
      }
     },
     {
@@ -638,7 +642,8 @@
       "intro": {
        "en": "Kestrel Physio moved from a paper diary per clinic to shared scheduling with text reminders.",
        "de": "Kestrel Physio ist vom Papierkalender pro Praxis zu gemeinsamer Terminplanung mit SMS-Erinnerungen gewechselt."
-      }
+      },
+      "visual": "none"
      }
     },
     {
@@ -751,7 +756,8 @@
       "intro": {
        "en": "Marlow Foods replaced a 15-year-old stock database with scanning and live stock levels.",
        "de": "Marlow Foods hat eine 15 Jahre alte Lagerdatenbank durch Scannen und Echtzeit-Bestände ersetzt."
-      }
+      },
+      "visual": "none"
      }
     },
     {
@@ -863,7 +869,8 @@
       "intro": {
        "en": "Written by the engineers and designers at Northfold.",
        "de": "Geschrieben von den Entwicklern und Designern bei Northfold."
-      }
+      },
+      "visual": "none"
      }
     },
     {
@@ -908,7 +915,8 @@
       "intro": {
        "en": "Small releases are easier to test, easier to undo and easier to explain to the people using them.",
        "de": "Kleine Releases sind leichter zu testen, leichter rückgängig zu machen und leichter zu erklären."
-      }
+      },
+      "visual": "none"
      }
     },
     {
@@ -948,7 +956,8 @@
       "intro": {
        "en": "How a fourteen-person studio covers on-call for the systems it hosts.",
        "de": "Wie ein Studio mit vierzehn Leuten die Bereitschaft für seine Systeme abdeckt."
-      }
+      },
+      "visual": "none"
      }
     },
     {
@@ -987,7 +996,8 @@
       "intro": {
        "en": "Northfold started as three engineers who kept being asked to look after the systems they had built. It still works that way.",
        "de": "Northfold begann mit drei Entwicklern, die immer wieder gebeten wurden, sich um die Systeme zu kümmern, die sie gebaut hatten. So arbeiten wir bis heute."
-      }
+      },
+      "visual": "none"
      }
     },
     {

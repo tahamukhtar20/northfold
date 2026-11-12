@@ -5,6 +5,7 @@ import type { FormEvent, ReactNode } from "react";
 import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 import { t } from "../content/schema.ts";
 import type { Block, Lang, Link, Page, Site, Text } from "../content/schema.ts";
+import { HeroVisual } from "./HeroVisual.tsx";
 import { UI_TEXT, formatDate, href } from "./ui.ts";
 
 type Ctx = { lang: Lang; site: Site; page: Page };
@@ -48,7 +49,7 @@ function Head({ heading, intro, lang }: { heading: unknown; intro: unknown; lang
   const h = tx(heading, lang), i = tx(intro, lang);
   if (!h && !i) return null;
   return (
-    <div className="sec-head">
+    <div className="sec-head" data-reveal>
       {h && <h2>{h}</h2>}
       {i && <p className="sub">{i}</p>}
     </div>
@@ -58,16 +59,32 @@ function Head({ heading, intro, lang }: { heading: unknown; intro: unknown; lang
 function Hero({ d, lang, page }: { d: Item; lang: Lang; page: Page }) {
   const buttons = list(d.buttons);
   const dated = page.kind !== "page" && page.date;
+  const visual = d.visual === "network";
   return (
-    <section className={`hero${page.kind === "page" && page.slug === "" ? " home" : ""}`}>
-      {dated && <p className="meta mono">{formatDate(page.date, lang)}</p>}
-      <h1>{tx(d.heading, lang)}</h1>
-      {tx(d.intro, lang) && <p className="lead">{tx(d.intro, lang)}</p>}
-      {buttons.length > 0 && (
-        <div className="actions">
-          {buttons.map((b, i) => (
-            <Btn key={i} link={b.link as Link} lang={lang} primary={i === 0} />
-          ))}
+    <section className={`hero${visual ? " with-visual" : ""}`}>
+      <div className="hero-copy">
+        {dated && (
+          <p className="meta mono" data-reveal>
+            {formatDate(page.date, lang)}
+          </p>
+        )}
+        <h1 data-reveal>{tx(d.heading, lang)}</h1>
+        {tx(d.intro, lang) && (
+          <p className="lead" data-reveal style={{ ["--i" as string]: 1 }}>
+            {tx(d.intro, lang)}
+          </p>
+        )}
+        {buttons.length > 0 && (
+          <div className="actions" data-reveal style={{ ["--i" as string]: 2 }}>
+            {buttons.map((b, i) => (
+              <Btn key={i} link={b.link as Link} lang={lang} primary={i === 0} />
+            ))}
+          </div>
+        )}
+      </div>
+      {visual && (
+        <div className="hero-visual" data-reveal style={{ ["--i" as string]: 2 }}>
+          <HeroVisual lang={lang} />
         </div>
       )}
     </section>
@@ -79,8 +96,8 @@ function Stats({ d, lang }: { d: Item; lang: Lang }) {
   return (
     <section className="sec stats" style={{ ["--n" as string]: items.length }}>
       {items.map((it, i) => (
-        <div key={i}>
-          <b>{String(it.value ?? "")}</b>
+        <div key={i} data-reveal style={{ ["--i" as string]: i }}>
+          <b data-count={String(it.value ?? "")}>{String(it.value ?? "")}</b>
           <span>{tx(it.label, lang)}</span>
         </div>
       ))}
@@ -94,7 +111,7 @@ function Cards({ d, lang }: { d: Item; lang: Lang }) {
       <Head heading={d.heading} intro={d.intro} lang={lang} />
       <div className="cards">
         {list(d.items).map((it, i) => (
-          <article className="card" key={i}>
+          <article className="card spot" key={i} data-reveal style={{ ["--i" as string]: i }}>
             {tx(it.kicker, lang) && <span className="kicker mono">{tx(it.kicker, lang)}</span>}
             <h3>{tx(it.title, lang)}</h3>
             {tx(it.text, lang) && <p>{tx(it.text, lang)}</p>}
@@ -108,8 +125,8 @@ function Cards({ d, lang }: { d: Item; lang: Lang }) {
 function TextBlock({ d, lang }: { d: Item; lang: Lang }) {
   return (
     <section className="sec text">
-      {tx(d.heading, lang) && <h2>{tx(d.heading, lang)}</h2>}
-      <div className="prose">
+      {tx(d.heading, lang) && <h2 data-reveal>{tx(d.heading, lang)}</h2>}
+      <div className="prose" data-reveal style={{ ["--i" as string]: 1 }}>
         <Prose text={tx(d.body, lang)} />
       </div>
     </section>
@@ -122,7 +139,7 @@ function Steps({ d, lang }: { d: Item; lang: Lang }) {
       <Head heading={d.heading} intro={d.intro} lang={lang} />
       <ol className="steps">
         {list(d.items).map((it, i) => (
-          <li key={i}>
+          <li key={i} data-reveal style={{ ["--i" as string]: i }}>
             <span className="n mono">{String(i + 1).padStart(2, "0")}</span>
             {tx(it.when, lang) && <span className="when mono">{tx(it.when, lang)}</span>}
             <h3>{tx(it.title, lang)}</h3>
@@ -137,7 +154,7 @@ function Steps({ d, lang }: { d: Item; lang: Lang }) {
 function Quote({ d, lang }: { d: Item; lang: Lang }) {
   return (
     <section className="sec">
-      <figure className="quote">
+      <figure className="quote" data-reveal>
         <blockquote>{tx(d.text, lang)}</blockquote>
         <figcaption>
           <b>{String(d.name ?? "")}</b>
@@ -163,7 +180,7 @@ function PageList({ d, ctx }: { d: Item; ctx: Ctx }) {
       ) : (
         <div className={kind === "case" ? "cards list" : "posts"}>
           {shown.map((p) => (
-            <a className={kind === "case" ? "card link" : "post"} key={p.id} href={href(`/${base}/${p.slug}`, lang)}>
+            <a className={kind === "case" ? "card link spot" : "post"} key={p.id} href={href(`/${base}/${p.slug}`, lang)} data-reveal style={{ ["--i" as string]: shown.indexOf(p) }}>
               <span className="kicker mono">{formatDate(p.date, lang)}</span>
               <h3>{t(p.title, lang)}</h3>
               <p>{t(p.summary, lang)}</p>
@@ -181,7 +198,7 @@ function PageList({ d, ctx }: { d: Item; ctx: Ctx }) {
 function Facts({ d, lang }: { d: Item; lang: Lang }) {
   return (
     <section className="sec">
-      <dl className="facts">
+      <dl className="facts" data-reveal>
         {list(d.items).map((it, i) => (
           <div key={i}>
             <dt>{tx(it.label, lang)}</dt>
@@ -196,11 +213,13 @@ function Facts({ d, lang }: { d: Item; lang: Lang }) {
 function Cta({ d, lang }: { d: Item; lang: Lang }) {
   return (
     <section className="sec cta">
-      <div>
+      <div className="cta-inner" data-reveal>
+        <div>
         <h2>{tx(d.heading, lang)}</h2>
-        {tx(d.intro, lang) && <p>{tx(d.intro, lang)}</p>}
+          {tx(d.intro, lang) && <p>{tx(d.intro, lang)}</p>}
+        </div>
+        <Btn link={d.button as Link} lang={lang} primary />
       </div>
-      <Btn link={d.button as Link} lang={lang} primary />
     </section>
   );
 }

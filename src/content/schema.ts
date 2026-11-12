@@ -32,6 +32,7 @@ export const BLOCKS: BlockDef[] = [
       heading(100),
       intro,
       { key: "buttons", label: "Buttons", kind: "list", itemLabel: "Button", max: 2, item: [{ key: "link", label: "Link", kind: "link" }] },
+      { key: "visual", label: "Animation", kind: "select", options: ["none", "network"] },
     ],
   },
   {

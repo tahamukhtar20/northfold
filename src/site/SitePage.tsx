@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { DEFAULT_LANG, LANGS, resolvePath, t } from "../content/schema.ts";
 import type { Lang, Site } from "../content/schema.ts";
 import { loadDraft } from "../content/draft.ts";
+import { startMotion } from "./motion.ts";
 import { PageBlocks } from "./Blocks.tsx";
 import { Layout } from "./Layout.tsx";
 import { UI_TEXT } from "./ui.ts";
@@ -63,6 +64,8 @@ export function SiteClient({ published, path }: { published: Site; path: string 
     }
   }, []);
   const site = draft && !hidden ? draft : published;
+  // Re-run when the content swaps (draft shown or hidden) so new elements animate too.
+  useEffect(() => startMotion(), [site]);
   useEffect(() => {
     document.title = pageTitle(site, path).title;
   }, [site, path]);

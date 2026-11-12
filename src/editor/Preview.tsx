@@ -22,6 +22,8 @@ export default function Preview() {
       if ((e.target as Element).closest?.("a, button[type=submit]")) e.preventDefault();
     };
     const onSubmit = (e: Event) => e.preventDefault();
+    // No scroll reveals in the editor: blocks must always be visible there.
+    document.documentElement.classList.add("no-motion");
     window.addEventListener("message", onMessage);
     document.addEventListener("click", onClick, true);
     document.addEventListener("submit", onSubmit, true);
