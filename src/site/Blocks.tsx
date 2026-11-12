@@ -316,6 +316,7 @@ export function PageBlocks({ site, page, lang, selected, onSelect }: Props) {
           key={b.id}
           className={`pick${b.id === selected ? " on" : ""}`}
           data-type={b.type}
+          data-id={b.id}
           onClickCapture={(e) => {
             e.preventDefault();
             onSelect(b.id);

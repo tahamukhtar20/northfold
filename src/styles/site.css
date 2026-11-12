@@ -712,3 +712,34 @@ a.post:hover {
     padding: 10px 14px;
   }
 }
+
+/* ---------- editor preview ---------- */
+.pick {
+  position: relative;
+  cursor: pointer;
+}
+.pick:hover::after,
+.pick.on::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 2px solid var(--acc);
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0.45;
+}
+.pick.on::after {
+  opacity: 1;
+}
+.pick.on::before {
+  content: attr(data-type);
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  z-index: 2;
+  background: var(--acc);
+  color: var(--acc-ink);
+  font: 11px "JetBrains Mono", monospace;
+  padding: 2px 7px;
+  border-radius: 0 0 6px 0;
+}
