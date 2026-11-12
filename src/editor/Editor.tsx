@@ -10,6 +10,7 @@ import { createHistory, push, redo, undo } from "./history.ts";
 import { addBlock, addPage, duplicateBlock, moveBlock, moveItem, removeBlock, removePage, setBlockField, setPageField } from "./ops.ts";
 import type { Key } from "./ops.ts";
 import { BlockInspector, PageInspector } from "./Inspector.tsx";
+import { Modal } from "./Modal.tsx";
 import { Outline } from "./Outline.tsx";
 import type { FromPreview, ToPreview } from "./Preview.tsx";
 import "../styles/editor.css";
@@ -67,18 +68,29 @@ export default function Editor({ published }: { published: Site }) {
     history.replaceState(null, "", `/edit?page=${encodeURIComponent(page.id)}&lang=${lang}`);
   }, [page.id, lang]);
 
-  // Autosave every change to this browser, a moment after typing stops.
+  // Autosave a moment after typing stops: only real changes are written, and a site that
+  // matches the published one again (say, after undoing everything) removes the draft.
+  const publishedJson = useMemo(() => JSON.stringify(published), [published]);
+  const lastSaved = useRef<string | null>(initial ? JSON.stringify(initial.site) : null);
   useEffect(() => {
-    if (site === published && !initial) return;
     const id = setTimeout(() => {
+      const json = JSON.stringify(site);
+      if (json === (lastSaved.current ?? publishedJson)) return;
       try {
-        setSavedAt(saveDraft(site));
+        if (json === publishedJson) {
+          clearDraft();
+          lastSaved.current = null;
+          setSavedAt(null);
+        } else {
+          setSavedAt(saveDraft(site));
+          lastSaved.current = json;
+        }
       } catch {
         setNotice({ kind: "bad", text: "Could not save in this browser. Export the JSON to keep your work." });
       }
     }, 400);
     return () => clearTimeout(id);
-  }, [site, published, initial]);
+  }, [site, publishedJson]);
   useEffect(() => {
     const id = setInterval(() => setNow(Date.now()), 5000);
     return () => clearInterval(id);
@@ -96,7 +108,8 @@ export default function Editor({ published }: { published: Site }) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const mod = e.ctrlKey || e.metaKey;
-      if (!mod) return;
+      // Inside a dialog, Ctrl+Z belongs to the text field, not to the site's history.
+      if (!mod || (e.target as Element).closest?.("[role=dialog]")) return;
       const k = e.key.toLowerCase();
       if (k === "z" && !e.shiftKey) (e.preventDefault(), doUndo());
       else if ((k === "z" && e.shiftKey) || k === "y") (e.preventDefault(), doRedo());
@@ -143,9 +156,10 @@ export default function Editor({ published }: { published: Site }) {
   };
 
   // ---------- edits ----------
-  const onField = (path: Key[], value: unknown) => {
+  /** `merge` is false for structural edits (adding or removing list items), which are always their own undo step. */
+  const onField = (path: Key[], value: unknown, merge = true) => {
     if (!block) return;
-    commit(setBlockField(site, page.id, block.id, path, value), `${block.id}:${path.join(".")}`);
+    commit(setBlockField(site, page.id, block.id, path, value), merge ? `${block.id}:${path.join(".")}` : null);
   };
   const onItemMove = (listPath: Key[], from: number, to: number) => block && commit(moveItem(site, page.id, block.id, listPath, from, to));
   const onAdd = (type: string) => {
@@ -188,6 +202,7 @@ export default function Editor({ published }: { published: Site }) {
   };
   const reset = () => {
     clearDraft();
+    lastSaved.current = null;
     setHist(createHistory(published));
     setSavedAt(null);
     setConfirm(null);
@@ -338,9 +353,7 @@ export default function Editor({ published }: { published: Site }) {
               title="Page preview"
               src="/preview"
               style={{ width: dw ? `${dw}px` : "100%" }}
-              onLoad={() => {
-                ready.current = false;
-              }}
+              onLoad={() => frame.current?.contentWindow?.postMessage({ type: "ping" }, location.origin)}
             />
           </div>
         </section>
@@ -394,12 +407,11 @@ export default function Editor({ published }: { published: Site }) {
       )}
 
       {confirm === "reset" && (
-        <div className="modal-back" onClick={() => setConfirm(null)}>
-          <div className="modal" role="dialog" aria-modal="true" aria-labelledby="reset-title" onClick={(e) => e.stopPropagation()}>
+        <Modal labelledBy="reset-title" onClose={() => setConfirm(null)}>
             <h2 id="reset-title">Discard your local edits?</h2>
             <p>The editor goes back to the published site and your edits are removed from this browser. Export the JSON first if you want to keep them.</p>
             <div className="row">
-              <button type="button" className="ebtn danger-btn" onClick={reset} autoFocus>
+              <button type="button" className="ebtn danger-btn" onClick={reset} data-autofocus>
                 Discard edits
               </button>
               <button type="button" className="ebtn line" onClick={exportJson}>
@@ -409,23 +421,11 @@ export default function Editor({ published }: { published: Site }) {
                 Cancel
               </button>
             </div>
-          </div>
-        </div>
+        </Modal>
       )}
 
       {newPage && (
-        <div className="modal-back" onClick={() => setNewPage(null)}>
-          <form
-            className="modal"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="new-title"
-            onClick={(e) => e.stopPropagation()}
-            onSubmit={(e) => {
-              e.preventDefault();
-              createPage();
-            }}
-          >
+        <Modal labelledBy="new-title" onClose={() => setNewPage(null)} onSubmit={createPage}>
             <h2 id="new-title">New page</h2>
             <div className="seg wide" role="group" aria-label="Kind of page">
               {groups.map(([kind, label]) => (
@@ -436,7 +436,7 @@ export default function Editor({ published }: { published: Site }) {
             </div>
             <label className="field">
               <span className="field-head">Title</span>
-              <input autoFocus value={newPage.title} maxLength={90} onChange={(e) => setNewPage({ ...newPage, title: e.target.value })} />
+              <input data-autofocus value={newPage.title} maxLength={90} onChange={(e) => setNewPage({ ...newPage, title: e.target.value })} />
             </label>
             <div className="row">
               <button type="submit" className="ebtn" disabled={!newPage.title.trim()}>
@@ -446,13 +446,11 @@ export default function Editor({ published }: { published: Site }) {
                 Cancel
               </button>
             </div>
-          </form>
-        </div>
+        </Modal>
       )}
 
       {showTranslations && (
-        <div className="modal-back" onClick={() => setShowTranslations(false)}>
-          <div className="modal wide" role="dialog" aria-modal="true" aria-labelledby="tr-title" onClick={(e) => e.stopPropagation()}>
+        <Modal labelledBy="tr-title" wide onClose={() => setShowTranslations(false)}>
             <div className="modal-head">
               <h2 id="tr-title">German translation</h2>
               <button type="button" className="mini" aria-label="Close" onClick={() => setShowTranslations(false)}>
@@ -484,8 +482,7 @@ export default function Editor({ published }: { published: Site }) {
                 </ul>
               </>
             )}
-          </div>
-        </div>
+        </Modal>
       )}
     </div>
   );

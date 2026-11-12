@@ -119,6 +119,7 @@ export function addPage(site: Site, kind: PageKind, title: string): [Site, strin
 /** Remove a page and any navigation entry pointing at it. The home page cannot be removed. */
 export function removePage(site: Site, pageId: string): Site {
   const page = site.pages.find((p) => p.id === pageId);
-  if (!page || (page.kind === "page" && page.slug === "")) return site;
+  const homes = site.pages.filter((p) => p.kind === "page" && p.slug === "");
+  if (!page || (homes.length === 1 && homes[0].id === pageId)) return site;
   return { ...site, pages: site.pages.filter((p) => p.id !== pageId), nav: site.nav.filter((n) => n.page !== pageId) };
 }

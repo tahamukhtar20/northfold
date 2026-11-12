@@ -27,12 +27,15 @@ function reveal(root: ParentNode) {
 /** Count [data-count] figures up from zero, keeping any prefix and suffix ("99.97%", "9 yrs"). */
 function countUp(root: ParentNode) {
   if (reduced() || !("IntersectionObserver" in window)) return () => {};
-  const els = [...root.querySelectorAll<HTMLElement>("[data-count]")];
+  // Each figure counts once per page view; a re-run (draft shown or hidden) skips it.
+  const els = [...root.querySelectorAll<HTMLElement>("[data-count]:not([data-counted])")];
+  const frames = new Map<HTMLElement, number>();
   const io = new IntersectionObserver((entries) => {
     for (const e of entries) {
       if (!e.isIntersecting) continue;
       io.unobserve(e.target);
       const el = e.target as HTMLElement;
+      el.dataset.counted = "";
       const text = el.dataset.count ?? el.textContent ?? "";
       const m = text.match(/^(\D*)(\d[\d,.]*)(.*)$/);
       if (!m) continue;
@@ -45,14 +48,24 @@ function countUp(root: ParentNode) {
         const t = Math.min(1, (now - start) / dur);
         const eased = 1 - Math.pow(1 - t, 4);
         el.textContent = `${pre}${(target * eased).toFixed(decimals)}${post}`;
-        if (t < 1) requestAnimationFrame(step);
-        else el.textContent = text;
+        if (t < 1) frames.set(el, requestAnimationFrame(step));
+        else {
+          el.textContent = text;
+          frames.delete(el);
+        }
       };
-      requestAnimationFrame(step);
+      frames.set(el, requestAnimationFrame(step));
     }
   }, { threshold: 0.6 });
   els.forEach((e) => io.observe(e));
-  return () => io.disconnect();
+  // Stopping mid-count puts the real figure back before React takes over again.
+  return () => {
+    io.disconnect();
+    frames.forEach((id, el) => {
+      cancelAnimationFrame(id);
+      el.textContent = el.dataset.count ?? el.textContent;
+    });
+  };
 }
 
 /** Cards light up where the pointer is: sets --mx/--my on .spot elements. */

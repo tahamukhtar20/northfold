@@ -5,7 +5,8 @@ import { emptyData } from "../content/schema.ts";
 import type { Field, Link, Problem, Text } from "../content/schema.ts";
 import type { Key } from "./ops.ts";
 
-export type Change = (path: Key[], value: unknown) => void;
+/** `merge` false makes the change its own undo step (used for adding and removing list items). */
+export type Change = (path: Key[], value: unknown, merge?: boolean) => void;
 type Props = { field: Field; value: unknown; path: Key[]; onChange: Change; onMove: (listPath: Key[], from: number, to: number) => void; problems: Problem[]; idBase: string };
 
 /** Problems whose path is this field (or inside it), as "a.b[2].c" strings. */
@@ -186,7 +187,7 @@ function ListField(props: Props) {
                 disabled={!canRemove}
                 title={canRemove ? undefined : `At least ${field.min} needed`}
                 onClick={() => {
-                  onChange(path, items.filter((_, j) => j !== i));
+                  onChange(path, items.filter((_, j) => j !== i), false);
                   setOpen(null);
                 }}
               >
@@ -208,7 +209,7 @@ function ListField(props: Props) {
         className="add-item"
         disabled={!canAdd}
         onClick={() => {
-          onChange(path, [...items, emptyData(field.item)]);
+          onChange(path, [...items, emptyData(field.item)], false);
           setOpen(items.length);
         }}
       >

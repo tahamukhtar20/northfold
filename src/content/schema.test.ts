@@ -43,6 +43,7 @@ test("validation catches the common mistakes", () => {
   assert.ok(msgs.some((m) => m.includes("share the address")), msgs.join("\n"));
   assert.ok(msgs.includes("Heading is required"));
   assert.ok(msgs.some((m) => m.startsWith("Duplicate block id")));
+  assert.ok(validateSite(s).find((p) => p.message.startsWith("Duplicate block id"))?.fatal);
   assert.ok(msgs.includes("Name is required"));
   assert.ok(msgs.some((m) => m.includes("missing page")));
   assert.deepEqual(validateSite({ version: 2 }).length, 1);
@@ -68,4 +69,19 @@ test("missing translations are reported by path", () => {
   const s = clone();
   s.pages[0].blocks[0].data.intro = { en: "New intro" };
   assert.deepEqual(missing(s, "de").map((m) => m.path), ["pages[0].blocks[0].data.intro"]);
+});
+
+test("files missing what every page needs are fatal, without throwing", () => {
+  const fatal = (s: unknown) => validateSite(s).filter((p) => p.fatal).map((p) => p.message);
+  const noTicker = clone() as Partial<Site>;
+  delete noTicker.ticker;
+  assert.ok(fatal(noTicker).some((m) => m.startsWith("Ticker")));
+  assert.ok(fatal({ ...clone(), pages: [] }).includes("The site needs at least one page"));
+  const s = clone();
+  (s.pages as unknown[]).push(null);
+  (s.pages[0].blocks as unknown[]).push(null);
+  (s.nav as unknown[]).push(null);
+  delete (s.pages[1] as Partial<Site["pages"][number]>).summary;
+  const msgs = fatal(s);
+  assert.ok(msgs.includes("Page needs an id") && msgs.includes("Block needs an id") && msgs.some((m) => m.startsWith("Navigation must")) && msgs.some((m) => m.startsWith("Page summary")));
 });

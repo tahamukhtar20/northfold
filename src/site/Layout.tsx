@@ -41,6 +41,9 @@ export function Logo({ name }: { name: string }) {
 export function Layout({ site, page, lang, children, banner, preview }: Props) {
   const ui = UI_TEXT[lang];
   const current = page ? pagePath(page, lang) : "";
+  // "Start a project" goes to whichever page holds the contact form.
+  const contactPage = site.pages.find((p) => p.blocks.some((b) => b.type === "contact"));
+  const contactUrl = contactPage ? pagePath(contactPage, lang) : href("/contact", lang);
   const editUrl = `/edit?page=${encodeURIComponent(page?.id ?? "home")}&lang=${lang}`;
   const nav = site.nav
     .map((n) => ({ n, p: site.pages.find((p) => p.id === n.page) }))
@@ -81,7 +84,7 @@ export function Layout({ site, page, lang, children, banner, preview }: Props) {
           <Sun size={17} className="sun" aria-hidden />
           <Moon size={17} className="moon" aria-hidden />
         </button>
-        <a className="btn hide-sm" href={href("/contact", lang)}>
+        <a className="btn hide-sm" href={contactUrl}>
           {ui.startProject}
         </a>
         <details className="burger">
@@ -94,7 +97,7 @@ export function Layout({ site, page, lang, children, banner, preview }: Props) {
                 {t(n.label, lang)}
               </a>
             ))}
-            <a href={href("/contact", lang)}>{ui.startProject}</a>
+            <a href={contactUrl}>{ui.startProject}</a>
           </nav>
         </details>
       </header>
@@ -110,7 +113,7 @@ export function Layout({ site, page, lang, children, banner, preview }: Props) {
                 {t(n.label, lang)}
               </a>
             ))}
-            <a href={href("/contact", lang)}>{ui.startProject}</a>
+            <a href={contactUrl}>{ui.startProject}</a>
           </nav>
         </div>
         <p className="small">{t(site.footer, lang)}</p>

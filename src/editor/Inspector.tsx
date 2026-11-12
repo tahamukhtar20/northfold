@@ -1,4 +1,5 @@
 // Right-hand panel: the selected block's fields, or the page's own settings.
+import { useMemo } from "react";
 import { Trash2 } from "lucide-react";
 import { blockDef, missing, validateBlock } from "../content/schema.ts";
 import type { Block, Page, Site, Text } from "../content/schema.ts";
@@ -68,7 +69,8 @@ function TextPair({ id, label, value, onChange, textarea, max }: { id: string; l
 }
 
 export function PageInspector({ site, page, onChange, onDelete, confirmingDelete, setConfirmingDelete }: PageProps) {
-  const isHome = page.kind === "page" && page.slug === "";
+  // Decided once per page, so emptying another page's address does not turn it into the home page's form.
+  const isHome = useMemo(() => page.kind === "page" && page.slug === "" && site.pages.filter((p) => p.kind === "page" && p.slug === "").length === 1, [page.id]);
   const base = page.kind === "case" ? "/work/" : page.kind === "post" ? "/journal/" : "/";
   const slugTaken = !isHome && uniqueSlug(site, page.kind, page.slug, page.id) !== page.slug;
   return (

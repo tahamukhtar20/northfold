@@ -346,7 +346,7 @@
   color: var(--mute);
   border-bottom: 1px solid var(--line);
 }
-.add-menu [role="menuitem"] {
+.add-menu .add-option {
   display: block;
   width: 100%;
   text-align: left;
@@ -356,10 +356,10 @@
   padding: 9px 12px;
   cursor: pointer;
 }
-.add-menu [role="menuitem"]:last-child {
+.add-menu .add-option:last-child {
   border-bottom: 0;
 }
-.add-menu [role="menuitem"]:hover {
+.add-menu .add-option:hover {
   background: var(--acc-soft);
 }
 .add-menu small {

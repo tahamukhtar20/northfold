@@ -108,7 +108,7 @@ export function Outline({ page, selected, onSelect, onMove, onAdd, onDuplicate, 
         })}
       </ol>
       {adding ? (
-        <div className="add-menu" role="menu" aria-label="Add a block">
+        <div className="add-menu" role="group" aria-label="Add a block">
           <div className="add-head">
             <span>{selected ? "Add below the selected block" : "Add at the end"}</span>
             <button type="button" className="mini" aria-label="Close" onClick={() => setAdding(false)}>
@@ -119,7 +119,7 @@ export function Outline({ page, selected, onSelect, onMove, onAdd, onDuplicate, 
             <button
               key={d.type}
               type="button"
-              role="menuitem"
+              className="add-option"
               onClick={() => {
                 onAdd(d.type);
                 setAdding(false);

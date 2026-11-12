@@ -33,6 +33,8 @@ write("edit", page({ html: "", title: "Editor · Northfold", description: "Edit 
 write("preview", page({ html: "", title: "Preview · Northfold", description: "", lang: "en" }));
 // The root picks English or German in the browser; without JavaScript it links both.
 write("", page({ html: '<p style="padding:40px;font-family:sans-serif"><a href="/en">English</a> · <a href="/de">Deutsch</a></p>', title: "Northfold", description: "", lang: "en" }));
+// Cloudflare serves the nearest 404.html, so each language gets its own.
 writeFileSync(join(dist, "404.html"), page(render("/en/__missing__")));
+for (const l of ["en", "de"]) writeFileSync(join(dist, l, "404.html"), page(render(`/${l}/__missing__`)));
 rmSync(join(root, "dist-server"), { recursive: true, force: true });
 console.log(`prerendered ${n} pages`);

@@ -265,34 +265,46 @@ export function validateBlock(b: Block, path = "block"): Problem[] {
 /** Everything wrong with a site, as readable messages. An empty list means it is valid. */
 export function validateSite(s: unknown): Problem[] {
   const out: Problem[] = [];
+  const fatal = (path: string, message: string) => out.push({ path, message, fatal: true });
   const site = s as Site;
   if (!site || typeof site !== "object" || site.version !== 1) return [{ path: "site", message: "Not a Northfold site file (version 1)", fatal: true }];
-  if (!Array.isArray(site.pages)) return [{ path: "site.pages", message: "Pages must be a list", fatal: true }];
+  // The chrome around every page needs these, so their shape is not negotiable.
+  if (typeof site.name !== "string") fatal("site.name", "Site name must be text");
+  if (!Array.isArray(site.ticker) || !site.ticker.every(isText)) fatal("site.ticker", "Ticker must be a list of translatable texts");
+  if (!isText(site.footer)) fatal("site.footer", "Footer must be translatable text");
+  if (!Array.isArray(site.nav) || !site.nav.every((n) => n && isText(n.label) && typeof n.page === "string")) fatal("site.nav", "Navigation must be a list of { label, page }");
+  if (!Array.isArray(site.pages)) return [...out, { path: "site.pages", message: "Pages must be a list", fatal: true }];
+  if (site.pages.length === 0) fatal("site.pages", "The site needs at least one page");
   const ids = new Set<string>(), paths = new Set<string>();
   site.pages.forEach((p, i) => {
     const at = `pages[${i}]`;
-    if (!p || typeof p.id !== "string") return void out.push({ path: at, message: "Page needs an id", fatal: true });
-    if (ids.has(p.id)) out.push({ path: at, message: `Duplicate page id "${p.id}"` });
+    if (!p || typeof p !== "object" || typeof p.id !== "string") return void fatal(at, "Page needs an id");
+    if (ids.has(p.id)) fatal(at, `Duplicate page id "${p.id}"`);
     ids.add(p.id);
-    if (!["page", "case", "post"].includes(p.kind)) out.push({ path: at, message: `Unknown page kind "${p.kind}"` });
-    if (typeof p.slug !== "string" || !/^[a-z0-9-]*(\/[a-z0-9-]+)*$/.test(p.slug)) out.push({ path: `${at}.slug`, message: "Slug may only use a-z, 0-9 and -" });
+    if (!["page", "case", "post"].includes(p.kind)) fatal(at, `Unknown page kind "${p.kind}"`);
+    if (typeof p.slug !== "string") fatal(`${at}.slug`, "Slug must be text");
+    else if (!/^[a-z0-9-]*(\/[a-z0-9-]+)*$/.test(p.slug)) out.push({ path: `${at}.slug`, message: "Slug may only use a-z, 0-9 and -" });
     else {
       const key = pagePath(p, "en");
       if (paths.has(key)) out.push({ path: `${at}.slug`, message: `Two pages share the address ${key}` });
       paths.add(key);
     }
-    if (!isText(p.title) || !p.title.en.trim()) out.push({ path: `${at}.title`, message: "Page title is required" });
-    if (!Array.isArray(p.blocks)) return void out.push({ path: `${at}.blocks`, message: "Blocks must be a list", fatal: true });
+    if (!isText(p.title)) fatal(`${at}.title`, "Page title must be translatable text");
+    else if (!p.title.en.trim()) out.push({ path: `${at}.title`, message: "Page title is required" });
+    if (!isText(p.summary)) fatal(`${at}.summary`, "Page summary must be translatable text");
+    if (!Array.isArray(p.blocks)) return void fatal(`${at}.blocks`, "Blocks must be a list");
     const blockIds = new Set<string>();
     p.blocks.forEach((b, j) => {
-      if (blockIds.has(b?.id)) out.push({ path: `${at}.blocks[${j}]`, message: `Duplicate block id "${b.id}"` });
-      blockIds.add(b?.id);
+      if (!b || typeof b !== "object" || typeof b.id !== "string") return void fatal(`${at}.blocks[${j}]`, "Block needs an id");
+      if (blockIds.has(b.id)) fatal(`${at}.blocks[${j}]`, `Duplicate block id "${b.id}"`);
+      blockIds.add(b.id);
       out.push(...validateBlock(b, `${at}.blocks[${j}]`));
     });
   });
-  (site.nav ?? []).forEach((n, i) => {
-    if (!ids.has(n.page)) out.push({ path: `nav[${i}]`, message: `Navigation points to a missing page "${n.page}"` });
-  });
+  if (Array.isArray(site.nav))
+    site.nav.forEach((n, i) => {
+      if (n && !ids.has(n.page)) out.push({ path: `nav[${i}]`, message: `Navigation points to a missing page "${n.page}"` });
+    });
   return out;
 }
 

@@ -5,17 +5,20 @@ import type { Lang, Site } from "../content/schema.ts";
 import { PageBlocks } from "../site/Blocks.tsx";
 import { Layout } from "../site/Layout.tsx";
 
-export type ToPreview = { type: "render"; site: Site; pageId: string; lang: Lang; selected: string | null; theme: "light" | "dark"; scroll: boolean };
+export type ToPreview = { type: "render"; site: Site; pageId: string; lang: Lang; selected: string | null; theme: "light" | "dark"; scroll: boolean } | { type: "ping" };
+type RenderMsg = Extract<ToPreview, { type: "render" }>;
 export type FromPreview = { type: "ready" } | { type: "select"; id: string };
 
 export default function Preview() {
-  const [msg, setMsg] = useState<ToPreview | null>(null);
+  const [msg, setMsg] = useState<RenderMsg | null>(null);
   const last = useRef<string | null>(null);
 
   useEffect(() => {
     const onMessage = (e: MessageEvent) => {
-      if (e.origin !== location.origin || e.data?.type !== "render") return;
-      setMsg(e.data as ToPreview);
+      if (e.origin !== location.origin || e.source !== parent) return;
+      // The editor pings after the frame loads, in case it missed our first "ready".
+      if (e.data?.type === "ping") return parent.postMessage({ type: "ready" } satisfies FromPreview, location.origin);
+      if (e.data?.type === "render") setMsg(e.data as RenderMsg);
     };
     // Links and forms do nothing in the preview; the page is for looking at.
     const onClick = (e: Event) => {

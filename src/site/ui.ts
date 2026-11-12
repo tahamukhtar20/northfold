@@ -66,7 +66,8 @@ export const REPO = "https://github.com/tahamukhtar20/northfold";
 
 /** Turn a content link target into a URL in the current language. */
 export function href(target: string, lang: Lang): string {
-  if (/^(https?:|mailto:)/.test(target)) return target;
+  // Full URLs, in-page anchors, queries and paths that already name a language stay as they are.
+  if (/^(https?:|mailto:|#|\?)/.test(target) || /^\/(en|de)(\/|$)/.test(target)) return target;
   const path = target.replace(/^\/+/, "");
   return path ? `/${lang}/${path}` : `/${lang}`;
 }
